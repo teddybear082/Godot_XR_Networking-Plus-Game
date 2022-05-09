@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=2]
+[gd_scene load_steps=52 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://addons/godot-xr-tools/misc/VR_Common_Shader_Cache.tscn" type="PackedScene" id=2]
@@ -69,6 +69,17 @@ uv1_scale = Vector3( 20, 20, 20 )
 
 [sub_resource type="BoxShape" id=6]
 extents = Vector3( 30, 0.1, 30 )
+
+[sub_resource type="SpatialMaterial" id=23]
+flags_transparent = true
+flags_unshaded = true
+flags_do_not_receive_shadows = true
+vertex_color_use_as_albedo = true
+albedo_color = Color( 1, 1, 1, 0 )
+
+[sub_resource type="CubeMesh" id=24]
+material = SubResource( 23 )
+size = Vector3( 1, 1, 1 )
 
 [node name="Main" type="Spatial"]
 script = ExtResource( 1 )
@@ -387,6 +398,138 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 47.5, 1, 6 )
 [node name="Pellet13" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 47.5, 1, 8 )
 
+[node name="Pellet114" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 44.5, 1, 8 )
+
+[node name="Pellet115" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, 1, 8 )
+
+[node name="Pellet116" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5, 1, 8 )
+
+[node name="Pellet97" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 50.5, 1, 8 )
+
+[node name="Pellet98" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 53.5, 1, 8 )
+
+[node name="Pellet99" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 56.5, 1, 8 )
+
+[node name="Pellet100" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 58.5, 1, 10 )
+
+[node name="Pellet154" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 65, 1, 10 )
+
+[node name="Pellet155" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 65, 1, 13 )
+
+[node name="Pellet101" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 58.5, 1, 13 )
+
+[node name="Pellet102" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 56.5, 1, 14 )
+
+[node name="Pellet105" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 61.5, 1, 25.5 )
+
+[node name="Pellet129" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 58.5, 1, 25.5 )
+
+[node name="Pellet141" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 58.5, 1, 22.5 )
+
+[node name="Pellet142" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 58.5, 1, 19.5 )
+
+[node name="Pellet148" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 55.5, 1, 19.5 )
+
+[node name="Pellet149" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 53, 1, 19.5 )
+
+[node name="Pellet150" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 53, 1, 16.5 )
+
+[node name="Pellet130" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 55.5, 1, 25.5 )
+
+[node name="Pellet131" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 52.5, 1, 25.5 )
+
+[node name="Pellet132" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 49.5, 1, 25.5 )
+
+[node name="Pellet133" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 46.5, 1, 25.5 )
+
+[node name="Pellet134" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 43.5, 1, 25.5 )
+
+[node name="Pellet135" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40.5, 1, 25.5 )
+
+[node name="Pellet136" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5, 1, 25.5 )
+
+[node name="Pellet137" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5, 1, 22.5 )
+
+[node name="Pellet138" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5, 1, 19.5 )
+
+[node name="Pellet117" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 64.5, 1, 25.5 )
+
+[node name="Pellet143" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 64.5, 1, 22.5 )
+
+[node name="Pellet144" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 64.5, 1, 19.5 )
+
+[node name="Pellet145" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 67.5, 1, 19.5 )
+
+[node name="Pellet146" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 70, 1, 19.5 )
+
+[node name="Pellet147" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 70, 1, 16.5 )
+
+[node name="Pellet118" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 67.5, 1, 25.5 )
+
+[node name="Pellet119" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 70.5, 1, 25.5 )
+
+[node name="Pellet120" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 73.5, 1, 25.5 )
+
+[node name="Pellet121" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 76.5, 1, 25.5 )
+
+[node name="Pellet122" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 79.5, 1, 25.5 )
+
+[node name="Pellet123" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 82.5, 1, 25.5 )
+
+[node name="Pellet124" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 85.5, 1, 25.5 )
+
+[node name="Pellet125" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 85.5, 1, 22.5 )
+
+[node name="Pellet126" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 85.5, 1, 19.5 )
+
+[node name="Pellet103" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 53.5, 1, 14 )
+
+[node name="Pellet104" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 50.5, 1, 14 )
+
 [node name="Pellet12" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 47.5, 1, 10 )
 
@@ -403,7 +546,13 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 47.5, 1, 16 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 47.5, 1, 18 )
 
 [node name="Pellet7" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 47.5, 1, 20 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 44.5, 1, 19.5 )
+
+[node name="Pellet139" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, 1, 19.5 )
+
+[node name="Pellet140" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, 1, 16.5 )
 
 [node name="Pellet6" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 47.5, 1, -2 )
@@ -426,6 +575,12 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 47.5, 1, -12 )
 [node name="Pellet19" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 47.5, 1, -14 )
 
+[node name="Pellet95" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 44.5, 1, -14 )
+
+[node name="Pellet96" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, 1, -14 )
+
 [node name="Pellet17" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 47.5, 1, -16 )
 
@@ -435,8 +590,140 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 47.5, 1, -18 )
 [node name="Pellet25" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 47.5, 1, -28 )
 
+[node name="Pellet74" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 50.5, 1, -28 )
+
+[node name="Pellet75" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 53.5, 1, -28 )
+
+[node name="Pellet76" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 56.5, 1, -28 )
+
+[node name="Pellet77" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 59.5, 1, -28 )
+
+[node name="Pellet78" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 59.5, 1, -25 )
+
+[node name="Pellet79" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 59.5, 1, -22 )
+
+[node name="Pellet80" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 65, 1, -22 )
+
+[node name="Pellet81" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 65, 1, -25 )
+
+[node name="Pellet82" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 65, 1, -28 )
+
+[node name="Pellet83" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 68, 1, -28 )
+
+[node name="Pellet84" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 71, 1, -28 )
+
+[node name="Pellet85" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 74, 1, -28 )
+
+[node name="Pellet86" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 78, 1, -28 )
+
+[node name="Pellet87" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 81, 1, -28 )
+
+[node name="Pellet88" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 84, 1, -28 )
+
+[node name="Pellet71" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 44.5, 1, -28 )
+
+[node name="Pellet72" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, 1, -28 )
+
+[node name="Pellet73" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 38.5, 1, -28 )
+
 [node name="Pellet24" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 47.5, 1, -20 )
+
+[node name="Pellet56" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 44.5, 1, -20 )
+
+[node name="Pellet55" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, 1, -20 )
+
+[node name="Pellet54" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5, 1, -20 )
+
+[node name="Pellet68" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5, 1, -17 )
+
+[node name="Pellet69" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5, 1, -14 )
+
+[node name="Pellet70" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5, 1, -26 )
+
+[node name="Pellet53" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 50.5, 1, -20 )
+
+[node name="Pellet52" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 53.5, 1, -20 )
+
+[node name="Pellet51" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 56.5, 1, -20 )
+
+[node name="Pellet57" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 59.5, 1, -20 )
+
+[node name="Pellet65" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 62.5, 1, -20 )
+
+[node name="Pellet66" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 65.5, 1, -20 )
+
+[node name="Pellet58" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 71.5, 1, -20 )
+
+[node name="Pellet59" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 68.4687, 1, -20 )
+
+[node name="Pellet60" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 85.5, 1, -17 )
+
+[node name="Pellet91" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 85.5, 1, -20 )
+
+[node name="Pellet92" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 85.5, 1, -14 )
+
+[node name="Pellet93" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 82.5, 1, -14 )
+
+[node name="Pellet94" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 79.5, 1, -14 )
+
+[node name="Pellet89" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 85.5, 1, -24 )
+
+[node name="Pellet90" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 85.5, 1, -26 )
+
+[node name="Pellet61" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 74.5, 1, -20 )
+
+[node name="Pellet62" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 78.3186, 1, -20 )
+
+[node name="Pellet63" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 80.5973, 1, -20 )
+
+[node name="Pellet67" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 83, 1, -20 )
+
+[node name="Pellet64" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 87.9293, 1, -20 )
 
 [node name="Pellet23" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 47.5, 1, -22 )
@@ -462,6 +749,30 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.993, 1, 6 )
 [node name="Pellet30" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.993, 1, 8 )
 
+[node name="Pellet151" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 73, 1, 8 )
+
+[node name="Pellet152" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 70, 1, 8 )
+
+[node name="Pellet153" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 67, 1, 8 )
+
+[node name="Pellet109" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 79, 1, 8 )
+
+[node name="Pellet110" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 82, 1, 8 )
+
+[node name="Pellet111" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 85.5, 1, 8 )
+
+[node name="Pellet112" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 85.5, 1, 11 )
+
+[node name="Pellet113" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5, 1, 11 )
+
 [node name="Pellet31" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.993, 1, 10 )
 
@@ -471,6 +782,45 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.993, 1, 12 )
 [node name="Pellet33" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.993, 1, 14 )
 
+[node name="Pellet106" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 72.5, 1, 14 )
+
+[node name="Pellet107" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 69.5, 1, 14 )
+
+[node name="Pellet108" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 66.5, 1, 14 )
+
+[node name="Pellet156" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 58.5, 1, -12 )
+
+[node name="Pellet157" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 64.5, 1, -12 )
+
+[node name="Pellet158" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 64.5, 1, -14.5 )
+
+[node name="Pellet159" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 67.5, 1, -14.5 )
+
+[node name="Pellet160" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 70.5, 1, -14.5 )
+
+[node name="Pellet161" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 70.5, 1, -17.5 )
+
+[node name="Pellet162" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 53, 1, -17.5 )
+
+[node name="Pellet163" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 53, 1, -14.5 )
+
+[node name="Pellet164" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 55.5, 1, -14.5 )
+
+[node name="Pellet165" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 58.5, 1, -14.5 )
+
 [node name="Pellet34" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.993, 1, 16 )
 
@@ -478,7 +828,13 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.993, 1, 16 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.993, 1, 18 )
 
 [node name="Pellet36" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.993, 1, 20 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 78.5, 1, 19.5 )
+
+[node name="Pellet127" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 81.5, 1, 19.5 )
+
+[node name="Pellet128" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 81.5, 1, 16.5 )
 
 [node name="Pellet37" parent="Pellets" groups=["pellets"] instance=ExtResource( 41 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75.993, 1, -2 )
@@ -528,19 +884,29 @@ stream = ExtResource( 40 )
 [node name="Energizers" type="Node" parent="."]
 
 [node name="Energizer" parent="Energizers" groups=["energizers"] instance=ExtResource( 42 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 1, 15 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5, 1, 14.5 )
 
 [node name="Energizer4" parent="Energizers" groups=["energizers"] instance=ExtResource( 42 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 1, -15 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 37.5, 1, -22 )
 
 [node name="Energizer3" parent="Energizers" groups=["energizers"] instance=ExtResource( 42 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 82, 1, -15 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 85.5, 1, -22 )
 
 [node name="Energizer2" parent="Energizers" groups=["energizers"] instance=ExtResource( 42 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 82, 1, 15 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 85.5, 1, 14.5 )
 
 [node name="EnergizerSound" type="AudioStreamPlayer" parent="Energizers"]
 stream = ExtResource( 43 )
+
+[node name="PacManStart1" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 60.5, 0, 14 )
+mesh = SubResource( 24 )
+material/0 = null
+
+[node name="PacManStart2" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 63.5, 0, 14 )
+mesh = SubResource( 24 )
+material/0 = null
 
 [editable path="ARVROrigin/ARVRCamera/TestGrabArea"]
 [editable path="ARVROrigin/ARVRController_Left/Function_Grapple"]
