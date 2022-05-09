@@ -4,7 +4,7 @@
 
 Uses Godot OpenXR asset: https://github.com/GodotVR/godot_openxr
 Uses modified tools from https://github.com/GodotVR/godot-xr-tools
-
+Uses https://github.com/goatchurchprime/Godot_XR_networking
 
 Textures from https://ambientcg.com/
 
