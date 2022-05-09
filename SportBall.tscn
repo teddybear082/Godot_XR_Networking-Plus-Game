@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://addons/godot-xr-tools/objects/Object_pickable.gd" type="Script" id=1]
+[ext_resource path="res://click04.wav" type="AudioStream" id=2]
+
+[sub_resource type="PhysicsMaterial" id=9]
+bounce = 0.51
+
+[sub_resource type="SphereShape" id=7]
+margin = 0.01
+radius = 0.1
+
+[sub_resource type="SpatialMaterial" id=15]
+albedo_color = Color( 0.878431, 0.360784, 0.980392, 1 )
+metallic = 0.28
+roughness = 0.54
+
+[sub_resource type="SphereMesh" id=8]
+material = SubResource( 15 )
+radius = 0.1
+height = 0.2
+radial_segments = 10
+rings = 5
+
+[node name="SportBall" type="RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.54476, 1.91887, -4.03967 )
+collision_layer = 4097
+collision_mask = 4097
+physics_material_override = SubResource( 9 )
+contacts_reported = 1
+contact_monitor = true
+can_sleep = false
+angular_velocity = Vector3( 5, 0, 0 )
+script = ExtResource( 1 )
+reset_transform_on_pickup = false
+highlight_mesh_instance = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 7 )
+
+[node name="MeshInstance" type="MeshInstance" parent="CollisionShape"]
+mesh = SubResource( 8 )
+material/0 = null
+
+[node name="bouncesound" type="AudioStreamPlayer3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.54476, -1.91887, 4.03967 )
+stream = ExtResource( 2 )

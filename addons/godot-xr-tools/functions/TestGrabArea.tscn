@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/godot-xr-tools/functions/TestGrabArea.gd" type="Script" id=1]
+
+[sub_resource type="BoxShape" id=1]
+margin = 0.01
+extents = Vector3( 0.2, 0.2, 0.15 )
+
+[node name="TestGrabArea" type="Area"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+collision_layer = 3
+collision_mask = 3
+script = ExtResource( 1 )
+left_pickup = null
+right_pickup = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 1 )
+
+[node name="HolsterSound" type="AudioStreamPlayer3D" parent="."]
+
+[connection signal="area_shape_entered" from="." to="." method="_on_TestGrabArea_area_shape_entered"]
+[connection signal="area_shape_exited" from="." to="." method="_on_TestGrabArea_area_shape_exited"]

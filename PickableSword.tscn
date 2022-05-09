@@ -1,0 +1,61 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://addons/godot-xr-tools/objects/Object_pickable.tscn" type="PackedScene" id=1]
+[ext_resource path="res://objects/SwordBody.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/slicer/slicer.gd" type="Script" id=3]
+[ext_resource path="res://sounds/mixkit-sword-blade-swish-1506.mp3" type="AudioStream" id=4]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.01, 0.1, 0.01 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.035, 0.42, 0.02 )
+
+[sub_resource type="PointMesh" id=3]
+
+[node name="PickableSword" instance=ExtResource( 1 )]
+transform = Transform( 0.00455528, 0, 0.99999, 0, 1, 0, -0.99999, 0, 0.00455528, 0, -0.04, 0 )
+collision_layer = 3
+collision_mask = 3
+input_ray_pickable = false
+
+[node name="PickupCenter" parent="." index="0"]
+transform = Transform( -0.00888364, 0, 0.999961, 0, 1, 0, -0.999961, 0, -0.00888364, 0.06, 0.107, -0.015 )
+
+[node name="CollisionShape" parent="." index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00293022, 0.0631175, 0 )
+shape = SubResource( 1 )
+
+[node name="SwordBody" parent="." index="2" instance=ExtResource( 2 )]
+
+[node name="Area" type="Area" parent="." index="3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0108285, 0, 0 )
+input_ray_pickable = false
+script = ExtResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Area" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.632434, 0 )
+shape = SubResource( 2 )
+
+[node name="mesh" type="MeshInstance" parent="Area" index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0052247, 0, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="A" type="Position3D" parent="Area/mesh" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0319467, 0.27, 0 )
+
+[node name="C" type="Position3D" parent="Area/mesh" index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.044, 1, 0 )
+
+[node name="B" type="Position3D" parent="Area/mesh" index="2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0441117, 0.27, 0 )
+
+[node name="SwordSound" type="AudioStreamPlayer3D" parent="Area" index="2"]
+stream = ExtResource( 4 )
+unit_db = 5.0
+max_db = 5.0
+
+[connection signal="body_exited" from="Area" to="Area" method="_on_Area_body_exited"]
+
+[editable path="SwordBody"]
