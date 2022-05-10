@@ -7,10 +7,13 @@ extends MeshInstance
 onready var player_body = get_owner().get_node("ARVROrigin/PlayerBody/KinematicBody")
 onready var pellet_sound = get_owner().get_node("Pellets/PelletSound")
 onready var player_properties = get_owner().get_node("PlayerProperties")
+
 signal pellet_eaten
 # Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+
+#func _ready():
+	
+	 # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -32,3 +35,7 @@ func _on_PelletHitBox_body_entered(body):
 		player_properties.score += player_properties.pellet_value
 		emit_signal("pellet_eaten")
 		# Replace with function body.
+
+func new_game():
+	self.visible = true
+	$PelletHitBox/CollisionShape.disabled = false

@@ -68,3 +68,6 @@ func new_game():
 		var ghosts = get_tree().get_nodes_in_group("ghosts")
 		for each_ghost in ghosts:
 			each_ghost.global_transform.origin = each_ghost.ghost_starting_position
+			
+		#put all pellets back where they should start
+		get_tree().call_group("pellets", "new_game")
