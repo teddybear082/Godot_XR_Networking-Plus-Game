@@ -30,3 +30,7 @@ func handle_data_changed(player_lives, player_score):
 
 func _on_NewGameButton_pressed():
 	player_properties.new_game() # Replace with function body.
+
+
+func _on_QuitButton_pressed():
+	get_tree().quit() # Replace with function body.

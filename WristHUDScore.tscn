@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://fonts/Tytoon Mist.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://WristHUDScore.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+
+[node name="WristHUDScore" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -724.0
+margin_bottom = -400.0
+theme = SubResource( 2 )
+script = ExtResource( 2 )
+
+[node name="WristRect" type="ColorRect" parent="."]
+margin_right = 300.0
+margin_bottom = 200.0
+color = Color( 0.121569, 0.117647, 0.117647, 0 )
+
+[node name="WristText" type="RichTextLabel" parent="WristRect"]
+margin_right = 300.0
+margin_bottom = 200.0
+custom_colors/default_color = Color( 0.768627, 0.733333, 0.133333, 1 )
+text = "Test Text"
+override_selected_font_color = true

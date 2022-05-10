@@ -12,7 +12,6 @@ export var pellet_value := 100
 export var ghost_value := 1000
 export var fruit_value := 500
 export var energizer_value := 200
-onready var menu = $PacManMenu
 onready var arvrorigin = get_owner().get_node("ARVROrigin")
 onready var start_position = get_owner().get_node("PacManStart1")
 signal game_over

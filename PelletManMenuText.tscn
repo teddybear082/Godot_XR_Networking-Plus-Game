@@ -1,6 +1,24 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://PelletManMenuText.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.6, 0.6, 0.6, 0.596078 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.839216, 0.172549, 0.172549, 1 )
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.6, 0.6, 0.6, 0.596078 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.933333, 0.0392157, 0.0392157, 1 )
+border_blend = true
 
 [node name="PelletManMenuText" type="Control"]
 anchor_right = 1.0
@@ -23,6 +41,7 @@ margin_top = -10.0
 margin_right = 41.0
 margin_bottom = 10.0
 hint_tooltip = "Press here to start new game"
+custom_styles/hover = SubResource( 1 )
 text = "New Game"
 
 [node name="TitleRect" type="ColorRect" parent="NewGameRect"]
@@ -53,7 +72,23 @@ margin_bottom = -33.0
 color = Color( 0.117647, 0.247059, 0.427451, 1 )
 
 [node name="GameInfoText" type="RichTextLabel" parent="NewGameRect/GameInfoRect"]
-margin_right = 100.0
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -50.0
+margin_right = 50.0
 margin_bottom = 40.0
 
+[node name="QuitRect" type="ColorRect" parent="NewGameRect"]
+margin_left = 226.0
+margin_top = 149.0
+margin_right = 266.0
+margin_bottom = 189.0
+
+[node name="QuitButton" type="Button" parent="NewGameRect/QuitRect"]
+margin_right = 40.0
+margin_bottom = 20.0
+custom_styles/hover = SubResource( 2 )
+text = "EXIT"
+
 [connection signal="pressed" from="NewGameRect/NewGameButton" to="." method="_on_NewGameButton_pressed"]
+[connection signal="pressed" from="NewGameRect/QuitRect/QuitButton" to="." method="_on_QuitButton_pressed"]

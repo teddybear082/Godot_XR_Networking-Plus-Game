@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=2]
+[gd_scene load_steps=55 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://addons/godot-xr-tools/misc/VR_Common_Shader_Cache.tscn" type="PackedScene" id=2]
@@ -45,6 +45,7 @@
 [ext_resource path="res://sounds/WarpDrive_01.mp3" type="AudioStream" id=43]
 [ext_resource path="res://PacManMenuScreen.tscn" type="PackedScene" id=44]
 [ext_resource path="res://sounds/game_over.ogg" type="AudioStream" id=45]
+[ext_resource path="res://WristHUDViewport.tscn" type="PackedScene" id=46]
 
 [sub_resource type="CubeMesh" id=21]
 resource_local_to_scene = true
@@ -131,6 +132,9 @@ mesh = SubResource( 21 )
 visible = false
 material = ExtResource( 18 )
 
+[node name="WristHUDViewport" parent="ARVROrigin/ARVRController_Left" instance=ExtResource( 46 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0.12, 0 )
+
 [node name="ARVRController_Right" type="ARVRController" parent="ARVROrigin"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.532531, 2.28761, -1.40461 )
 controller_id = 2
@@ -205,6 +209,7 @@ scene = ExtResource( 11 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.32787, 1.91254 )
 
 [node name="SportBall" parent="." instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.54476, 0.448397, -0.996403 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.925065, -0.301336, 0.231195, 0.0305464, 0.66577, 0.745531, -0.378578, -0.682603, 0.625085, 3.30504, 8.65411, 0 )
@@ -917,6 +922,8 @@ material/0 = null
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 29, 1, 2 )
 
 [editable path="ARVROrigin/ARVRCamera/TestGrabArea"]
+[editable path="ARVROrigin/ARVRController_Left/LeftHand"]
+[editable path="ARVROrigin/ARVRController_Left/LeftHand/LeftHand"]
 [editable path="ARVROrigin/ARVRController_Left/Function_Grapple"]
 [editable path="ARVROrigin/ARVRController_Right/Function_pointer"]
 [editable path="ARVROrigin/ARVRController_Right/Function_Grapple"]
