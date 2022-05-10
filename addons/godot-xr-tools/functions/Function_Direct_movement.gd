@@ -98,6 +98,9 @@ var _turn_step := 0.0
 # Controller node
 onready var _controller : ARVRController = get_parent()
 
+#var to stop buttons from triggering action again when held by player
+var button_states = []
+
 # Perform jump movement
 func physics_movement(delta: float, player_body: PlayerBody):
 	# Skip if the controller isn't active
@@ -125,15 +128,20 @@ func physics_movement(delta: float, player_body: PlayerBody):
 	
 	if sprint_type == SPRINT_TYPE.TOGGLE_SPRINT:
 	
-		if canSprint and _controller.is_button_pressed(sprint_button_id) and !is_sprinting: 
-			is_sprinting = true
-			speed = sprint_speed
+		if canSprint and button_pressed(sprint_button_id):
+			if is_sprinting == false: 
+				is_sprinting = true
+				speed = sprint_speed
+				print("sprinting now and speed = " + str(speed))
+				print(str(button_states))
 	
-		elif canSprint and _controller.is_button_pressed(sprint_button_id) and is_sprinting:
-			is_sprinting = false
-			speed = default_speed
-		
-	# Implement hold sprint button if selected
+			else:
+				is_sprinting = false
+				speed = default_speed
+				print("back to normal speed now and speed = " + str(speed))
+				print(str(button_states))
+				
+		# Implement hold sprint button if selected
 	if sprint_type == SPRINT_TYPE.HOLD_TO_SPRINT:
 		speed = default_speed
 		
@@ -194,6 +202,15 @@ func _rotate_player(player_body: PlayerBody, angle: float):
 	rot = rot.rotated(Vector3(0.0, -1.0, 0.0), angle)
 	player_body.origin_node.transform = (player_body.origin_node.transform * t2 * rot * t1).orthonormalized()
 
+
+func button_pressed(b):
+	if _controller.is_button_pressed(b) and !button_states.has(b):
+		button_states.append(b)
+		return true
+	if not _controller.is_button_pressed(b) and button_states.has(b):
+		button_states.erase(b)
+	
+	return false
 # This method verifies the MovementProvider has a valid configuration.
 func _get_configuration_warning():
 	# Check the controller node

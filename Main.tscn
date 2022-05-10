@@ -97,6 +97,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.80099, 0 )
 [node name="vr_common_shader_cache" parent="ARVROrigin/ARVRCamera" instance=ExtResource( 2 )]
 
 [node name="TestGrabArea" parent="ARVROrigin/ARVRCamera" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.2 )
 holstered_object = ExtResource( 26 )
 left_pickup = NodePath("../../ARVRController_Left/Function_Pickup")
 right_pickup = NodePath("../../ARVRController_Right/Function_Pickup")
@@ -110,7 +111,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.490194, 2.33713, -1.39571 )
 [node name="Function_Direct_movement" parent="ARVROrigin/ARVRController_Left" instance=ExtResource( 5 )]
 move_type = 1
 canFly = false
-sprint_type = 0
 
 [node name="LeftHand" parent="ARVROrigin/ARVRController_Left" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03, -0.05, 0.15 )
