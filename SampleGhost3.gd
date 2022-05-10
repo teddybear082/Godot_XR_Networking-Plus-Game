@@ -68,7 +68,7 @@ func _on_GhostArea_body_entered(body):
 			#code to set GhostSound to kill player sound and play
 			$GhostSound.play()
 			player_properties.lives-=1
-			arvrorigin.global_transform.origin = Vector3(0,0,0)
+			#arvrorigin.global_transform.origin = Vector3(0,0,0)
 			
 		if escape == true:
 			#code to set GhostSound to eat ghost sound and play

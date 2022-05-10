@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=2]
+[gd_scene load_steps=54 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://addons/godot-xr-tools/misc/VR_Common_Shader_Cache.tscn" type="PackedScene" id=2]
@@ -31,7 +31,7 @@
 [ext_resource path="res://ClimbWallA.tscn" type="PackedScene" id=29]
 [ext_resource path="res://ClimbBoxA.tscn" type="PackedScene" id=30]
 [ext_resource path="res://SampleGhost.tscn" type="PackedScene" id=31]
-[ext_resource path="res://sounds/theme_song.mp3" type="AudioStream" id=32]
+[ext_resource path="res://sounds/Intro Theme.mp3" type="AudioStream" id=32]
 [ext_resource path="res://SliceRock.tscn" type="PackedScene" id=33]
 [ext_resource path="res://sounds/blade_02.ogg" type="AudioStream" id=34]
 [ext_resource path="res://SampleGhost3.tscn" type="PackedScene" id=35]
@@ -43,6 +43,8 @@
 [ext_resource path="res://Pellet.tscn" type="PackedScene" id=41]
 [ext_resource path="res://Energizer.tscn" type="PackedScene" id=42]
 [ext_resource path="res://sounds/WarpDrive_01.mp3" type="AudioStream" id=43]
+[ext_resource path="res://PacManMenuScreen.tscn" type="PackedScene" id=44]
+[ext_resource path="res://sounds/game_over.ogg" type="AudioStream" id=45]
 
 [sub_resource type="CubeMesh" id=21]
 resource_local_to_scene = true
@@ -380,6 +382,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 64.0872, 0.5, -3.109 )
 
 [node name="PlayerProperties" type="Node" parent="."]
 script = ExtResource( 39 )
+
+[node name="PlayerSound" type="AudioStreamPlayer" parent="PlayerProperties"]
+stream = ExtResource( 45 )
 
 [node name="Pellets" type="Node" parent="."]
 
@@ -907,6 +912,9 @@ material/0 = null
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 63.5, 0, 14 )
 mesh = SubResource( 24 )
 material/0 = null
+
+[node name="PacManMenuScreen" parent="." instance=ExtResource( 44 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 29, 1, 2 )
 
 [editable path="ARVROrigin/ARVRCamera/TestGrabArea"]
 [editable path="ARVROrigin/ARVRController_Left/Function_Grapple"]

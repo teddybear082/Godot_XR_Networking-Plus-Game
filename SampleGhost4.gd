@@ -64,14 +64,15 @@ func _on_GhostArea_body_entered(body):
 			#code to set GhostSound to kill player sound and play
 			$GhostSound.play()
 			player_properties.lives-=1
-			arvrorigin.global_transform.origin = Vector3(0,0,0)
+			#arvrorigin.global_transform.origin = Vector3(0,0,0)
 			
 		if escape == true:
 			#code to set GhostSound to eat ghost sound and play
 			$GhostSound.play()
 			player_properties.score+=player_properties.ghost_value
 			self.global_transform.origin = ghost_starting_position
-
+			
+			
 func attack_mode():
 	escape = false
 	$MeshInstance.set_surface_material(0, normal_material)#code to switch material
