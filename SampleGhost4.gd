@@ -6,7 +6,7 @@ var path = []
 var path_node = 0
 var speed = 5
 var ghost_starting_position = Vector3(0,0,0)
-#need preload for escape material
+var escape_material = null 
 var normal_material = null
 export var escape = false
 
@@ -19,7 +19,7 @@ onready var player_properties = get_owner().get_node("PlayerProperties")
 func _ready():
 	ghost_starting_position = self.global_transform.origin
 	normal_material = $MeshInstance.get_active_material(0)
-	#need escape material var set if not above 
+	escape_material = load("res://escapeenemymaterial.tres")  
 	
 func _physics_process(delta):
 	if path_node < path.size():
@@ -74,8 +74,9 @@ func _on_GhostArea_body_entered(body):
 
 func attack_mode():
 	escape = false
-	#code to switch material
+	$MeshInstance.set_surface_material(0, normal_material)#code to switch material
 	
 func escape_mode():
 	escape = true
+	$MeshInstance.set_surface_material(0, escape_material)
 	#code to switch material

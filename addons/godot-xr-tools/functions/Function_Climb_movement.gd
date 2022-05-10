@@ -122,7 +122,7 @@ func physics_movement(delta: float, player_body: PlayerBody):
 	if abs(offset.y) < .02*world_scale: #test if we are climbing vertically or not, .02 was trial and error
 		player_body._collision_node.shape.radius *= .05 #arbitrary reduction in size for testing
 		player_body._collision_node.shape.height *= .05 #arbitrary reduction in size for testing
-		print("Trying to apply smaller kinematic node collision shape to see if that helps")  #--> Just debug text
+		#print("Trying to apply smaller kinematic node collision shape to see if that helps")  #--> Just debug text
 		#print("The player's height now is " + str(player_body._collision_node.shape.height) + " and new radius is" + str(player_body._collision_node.shape.radius))  --> Just debug text
 	# Move the player by the offset
 	var old_position := player_body.kinematic_node.global_transform.origin

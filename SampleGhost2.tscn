@@ -32,7 +32,7 @@ mesh = SubResource( 7 )
 material/0 = SubResource( 82 )
 
 [node name="Ghost2Timer" type="Timer" parent="."]
-wait_time = 6.0
+wait_time = 5.0
 autostart = true
 
 [node name="GhostArea" type="Area" parent="."]

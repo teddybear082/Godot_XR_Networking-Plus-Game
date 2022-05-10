@@ -21,7 +21,7 @@ script = ExtResource( 2 )
 shape = SubResource( 2 )
 
 [node name="EnergizerTimer" type="Timer" parent="."]
-wait_time = 7.0
+wait_time = 8.0
 one_shot = true
 
 [connection signal="body_entered" from="EnergizerHitBox" to="." method="_on_EnergizerHitBox_body_entered"]

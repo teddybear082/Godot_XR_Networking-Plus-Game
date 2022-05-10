@@ -29,7 +29,7 @@ material/0 = SubResource( 92 )
 shape = SubResource( 6 )
 
 [node name="Ghost4Timer" type="Timer" parent="."]
-wait_time = 12.0
+wait_time = 9.0
 autostart = true
 
 [node name="GhostArea" type="Area" parent="."]
