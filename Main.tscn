@@ -159,6 +159,7 @@ mesh = SubResource( 16 )
 [node name="Function_Pickup" parent="ARVROrigin/ARVRController_Right" instance=ExtResource( 13 )]
 
 [node name="Function_Direct_movement_turn_only" parent="ARVROrigin/ARVRController_Right" instance=ExtResource( 16 )]
+smooth_rotation = false
 
 [node name="Function_Jump_movement" parent="ARVROrigin/ARVRController_Right" instance=ExtResource( 3 )]
 order = 17

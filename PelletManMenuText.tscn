@@ -1,9 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://PelletManMenuText.gd" type="Script" id=1]
 
 [sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.6, 0.6, 0.6, 0.596078 )
+bg_color = Color( 0.6, 0.6, 0.6, 0.607843 )
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
@@ -12,13 +12,21 @@ border_color = Color( 0.839216, 0.172549, 0.172549, 1 )
 border_blend = true
 
 [sub_resource type="StyleBoxFlat" id=2]
-bg_color = Color( 0.6, 0.6, 0.6, 0.596078 )
+bg_color = Color( 0.6, 0.6, 0.6, 0.607843 )
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
 border_width_bottom = 3
 border_color = Color( 0.933333, 0.0392157, 0.0392157, 1 )
 border_blend = true
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.772549, 0.109804, 0.109804, 1 )
 
 [node name="PelletManMenuText" type="Control"]
 anchor_right = 1.0
@@ -40,17 +48,16 @@ margin_left = -41.0
 margin_top = -10.0
 margin_right = 41.0
 margin_bottom = 10.0
-hint_tooltip = "Press here to start new game"
 custom_styles/hover = SubResource( 1 )
 text = "New Game"
 
 [node name="TitleRect" type="ColorRect" parent="NewGameRect"]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -50.0
-margin_top = 29.0
-margin_right = 50.0
-margin_bottom = 69.0
+margin_left = -121.0
+margin_top = 25.0
+margin_right = -21.0
+margin_bottom = 65.0
 color = Color( 0.117647, 0.247059, 0.427451, 1 )
 
 [node name="GameTitleLabel" type="RichTextLabel" parent="NewGameRect/TitleRect"]
@@ -65,10 +72,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -50.0
-margin_top = -73.0
-margin_right = 50.0
-margin_bottom = -33.0
+margin_left = 22.0
+margin_top = -174.0
+margin_right = 122.0
+margin_bottom = -134.0
 color = Color( 0.117647, 0.247059, 0.427451, 1 )
 
 [node name="GameInfoText" type="RichTextLabel" parent="NewGameRect/GameInfoRect"]
@@ -79,10 +86,10 @@ margin_right = 50.0
 margin_bottom = 40.0
 
 [node name="QuitRect" type="ColorRect" parent="NewGameRect"]
-margin_left = 226.0
-margin_top = 149.0
-margin_right = 266.0
-margin_bottom = 189.0
+margin_left = 243.0
+margin_top = 158.0
+margin_right = 283.0
+margin_bottom = 198.0
 
 [node name="QuitButton" type="Button" parent="NewGameRect/QuitRect"]
 margin_right = 40.0
@@ -90,5 +97,22 @@ margin_bottom = 20.0
 custom_styles/hover = SubResource( 2 )
 text = "EXIT"
 
+[node name="Label" type="Label" parent="."]
+margin_left = 12.0
+margin_top = 136.0
+margin_right = 138.0
+margin_bottom = 150.0
+custom_colors/font_color = Color( 0.768627, 0.105882, 0.105882, 1 )
+text = "SMOOTH TURNING:"
+
+[node name="CheckButton" type="CheckButton" parent="."]
+margin_left = 35.0
+margin_top = 150.0
+margin_right = 111.0
+margin_bottom = 190.0
+custom_colors/font_color = Color( 0.615686, 0.0823529, 0.0823529, 1 )
+custom_styles/hover = SubResource( 3 )
+
 [connection signal="pressed" from="NewGameRect/NewGameButton" to="." method="_on_NewGameButton_pressed"]
 [connection signal="pressed" from="NewGameRect/QuitRect/QuitButton" to="." method="_on_QuitButton_pressed"]
+[connection signal="toggled" from="CheckButton" to="." method="_on_CheckButton_toggled"]

@@ -6,6 +6,7 @@ extends Control
 # var b = "text"
 onready var player_properties = get_tree().get_root().find_node("PlayerProperties",true,false)
 onready var game_info_text = $NewGameRect/GameInfoRect/GameInfoText
+onready var player_turn = get_tree().get_root().find_node("Function_Direct_movement_turn_only",true,false)
 
 var lives = 3
 var score = 0
@@ -34,3 +35,10 @@ func _on_NewGameButton_pressed():
 
 func _on_QuitButton_pressed():
 	get_tree().quit() # Replace with function body.
+
+
+func _on_CheckButton_toggled(button_pressed):
+	if player_turn.smooth_rotation == true:
+		player_turn.smooth_rotation = false
+	else:
+		player_turn.smooth_rotation = true # Replace with function body.
