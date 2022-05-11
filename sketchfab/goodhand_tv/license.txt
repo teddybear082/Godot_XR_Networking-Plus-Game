@@ -1,0 +1,11 @@
+Model Information:
+* title:	Goodhand TV
+* source:	https://sketchfab.com/3d-models/goodhand-tv-ce584250ab4a4838b729368324b5f2b7
+* author:	jasongoodhand (https://sketchfab.com/jasongoodhand)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Goodhand TV" (https://sketchfab.com/3d-models/goodhand-tv-ce584250ab4a4838b729368324b5f2b7) by jasongoodhand (https://sketchfab.com/jasongoodhand) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)

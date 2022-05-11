@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=2]
+[gd_scene load_steps=56 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://addons/godot-xr-tools/misc/VR_Common_Shader_Cache.tscn" type="PackedScene" id=2]
@@ -46,6 +46,7 @@
 [ext_resource path="res://PacManMenuScreen.tscn" type="PackedScene" id=44]
 [ext_resource path="res://sounds/game_over.ogg" type="AudioStream" id=45]
 [ext_resource path="res://WristHUDViewport.tscn" type="PackedScene" id=46]
+[ext_resource path="res://PickableTV.tscn" type="PackedScene" id=47]
 
 [sub_resource type="CubeMesh" id=21]
 resource_local_to_scene = true
@@ -919,7 +920,12 @@ mesh = SubResource( 24 )
 material/0 = null
 
 [node name="PacManMenuScreen" parent="." instance=ExtResource( 44 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 29, 1, 2 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 29, 1.17879, 2.25176 )
+
+[node name="PickableTV" parent="." instance=ExtResource( 47 )]
+transform = Transform( -4.16567e-08, 0.302985, -0.952995, 1.32439e-08, 0.952995, 0.302985, 1, 0, -4.37114e-08, 29.4543, 1.25156, 2.27075 )
+mass = 5.10204
+gravity_scale = 2.0
 
 [editable path="ARVROrigin/ARVRCamera/TestGrabArea"]
 [editable path="ARVROrigin/ARVRController_Left/LeftHand"]
