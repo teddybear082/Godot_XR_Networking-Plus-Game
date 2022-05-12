@@ -378,15 +378,19 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.33195, 0, 0 )
 
 [node name="SampleGhost" parent="." groups=["ghosts"] instance=ExtResource( 31 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 62, 0.75, -3.109 )
+collision/safe_margin = 0.005
 
 [node name="SampleGhost2" parent="." groups=["ghosts"] instance=ExtResource( 38 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 65.941, 0.75, -3.109 )
+collision/safe_margin = 0.005
 
 [node name="SampleGhost3" parent="." groups=["ghosts"] instance=ExtResource( 35 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 64.087, 0.75, -3.109 )
+collision/safe_margin = 0.005
 
 [node name="SampleGhost4" parent="." groups=["ghosts"] instance=ExtResource( 37 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 59.326, 0.75, -3.155 )
+collision/safe_margin = 0.005
 
 [node name="PlayerProperties" type="Node" parent="."]
 script = ExtResource( 39 )

@@ -26,7 +26,7 @@ func _physics_process(delta):
 		var direction = (path[path_node]) - ghost.global_transform.origin
 		#print(str(path[path_node]))
 		#print("Distance to next path node is " +str(direction.length()))
-		if direction.length() < 0.5:
+		if direction.length() < 1: #was .5
 			path_node+=1
 		else:
 			ghost.look_at(target.translation, Vector3.UP)
