@@ -22,6 +22,7 @@ func _ready():
 	last_score = 0
 	last_lives = lives
 	
+	
 # Called when the node enters the scene tree for the first time.
 
 		
@@ -47,7 +48,9 @@ func _process(delta):
 		print("Game over!")
 		$PlayerSound.play()
 		new_game()
-	
+		
+		
+		
 func new_game():
 		print("New game is starting")
 		

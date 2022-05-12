@@ -18,7 +18,7 @@ onready var player_properties = get_owner().get_node("PlayerProperties")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	ghost_starting_position = self.global_transform.origin
-	normal_material = $MeshInstance.get_active_material(0)
+	normal_material = $Ghost/Icosphere001.get_active_material(0)
 	escape_material = load("res://escapeenemymaterial.tres")  
 	
 func _physics_process(delta):
@@ -29,6 +29,7 @@ func _physics_process(delta):
 		if direction.length() < 0.5:
 			path_node+=1
 		else:
+			ghost.look_at(target.translation, Vector3.UP)
 			ghost.move_and_slide(direction.normalized()*speed, Vector3.UP)
 	#print(str(ghost.global_transform.origin))
 	
@@ -75,9 +76,13 @@ func _on_GhostArea_body_entered(body):
 			
 func attack_mode():
 	escape = false
-	$MeshInstance.set_surface_material(0, normal_material)#code to switch material
+	$Ghost/Icosphere001.set_surface_material(0, normal_material)#code to switch material
 	
 func escape_mode():
 	escape = true
-	$MeshInstance.set_surface_material(0, escape_material)
+	$Ghost/Icosphere001.set_surface_material(0, escape_material)
 	#code to switch material
+
+
+func _on_AnimationPlayer_animation_finished(anim_name):
+	$Ghost/AnimationPlayer.play(anim_name)  # Replace with function body.

@@ -101,7 +101,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.80099, 0 )
 [node name="vr_common_shader_cache" parent="ARVROrigin/ARVRCamera" instance=ExtResource( 2 )]
 
 [node name="TestGrabArea" parent="ARVROrigin/ARVRCamera" instance=ExtResource( 12 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.2 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.25 )
 holstered_object = ExtResource( 26 )
 left_pickup = NodePath("../../ARVRController_Left/Function_Pickup")
 right_pickup = NodePath("../../ARVRController_Right/Function_Pickup")
@@ -378,14 +378,16 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.08277, 0, 10.5495 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.33195, 0, 0 )
 
 [node name="SampleGhost" parent="." groups=["ghosts"] instance=ExtResource( 31 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 62, 0.5, -3.109 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 62, 0.75, -3.109 )
 
 [node name="SampleGhost2" parent="." groups=["ghosts"] instance=ExtResource( 38 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 65.941, 0.75, -3.109 )
 
 [node name="SampleGhost3" parent="." groups=["ghosts"] instance=ExtResource( 35 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 64.0872, 0.5, -3.109 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 64.087, 0.75, -3.109 )
 
 [node name="SampleGhost4" parent="." groups=["ghosts"] instance=ExtResource( 37 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 59.326, 0.75, -3.155 )
 
 [node name="PlayerProperties" type="Node" parent="."]
 script = ExtResource( 39 )

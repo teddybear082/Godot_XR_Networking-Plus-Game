@@ -3,12 +3,10 @@
 [ext_resource path="res://ghostnav.gd" type="Script" id=1]
 [ext_resource path="res://enemymaterial.tres" type="Material" id=2]
 [ext_resource path="res://sounds/fail.wav" type="AudioStream" id=3]
+[ext_resource path="res://objects/Ghost.glb" type="PackedScene" id=4]
 
 [sub_resource type="BoxShape" id=6]
-extents = Vector3( 0.25, 0.5, 0.25 )
-
-[sub_resource type="CubeMesh" id=7]
-size = Vector3( 0.5, 1, 0.5 )
+extents = Vector3( 0.4, 1, 0.4 )
 
 [sub_resource type="SphereShape" id=8]
 radius = 0.75
@@ -23,10 +21,6 @@ script = ExtResource( 1 )
 shape = SubResource( 6 )
 disabled = true
 
-[node name="MeshInstance" type="MeshInstance" parent="."]
-mesh = SubResource( 7 )
-material/0 = ExtResource( 2 )
-
 [node name="GhostTimer" type="Timer" parent="."]
 wait_time = 3.0
 autostart = true
@@ -39,5 +33,25 @@ shape = SubResource( 8 )
 [node name="GhostSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 
+[node name="SpotLight" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.6 )
+light_color = Color( 0.121569, 0.905882, 0.133333, 1 )
+light_energy = 10.0
+spot_range = 10.0
+spot_angle = 20.0
+
+[node name="Ghost" parent="." instance=ExtResource( 4 )]
+transform = Transform( -0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 0, -0.6, 0 )
+
+[node name="Icosphere001" parent="Ghost" index="0"]
+cast_shadow = 0
+material/0 = ExtResource( 2 )
+
+[node name="AnimationPlayer" parent="Ghost" index="1"]
+autoplay = "IcosphereAction"
+
 [connection signal="timeout" from="GhostTimer" to="." method="_on_GhostTimer_timeout"]
 [connection signal="body_entered" from="GhostArea" to="." method="_on_GhostArea_body_entered"]
+[connection signal="animation_finished" from="Ghost/AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+
+[editable path="Ghost"]

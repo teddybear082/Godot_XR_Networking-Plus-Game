@@ -2,20 +2,16 @@
 
 [ext_resource path="res://SampleGhost3.gd" type="Script" id=1]
 [ext_resource path="res://sounds/fail.wav" type="AudioStream" id=2]
+[ext_resource path="res://objects/Ghost.glb" type="PackedScene" id=3]
 
 [sub_resource type="BoxShape" id=6]
-extents = Vector3( 0.25, 0.5, 0.25 )
-
-[sub_resource type="CubeMesh" id=7]
-size = Vector3( 0.5, 1, 0.5 )
-
-[sub_resource type="SpatialMaterial" id=81]
-flags_unshaded = true
-flags_do_not_receive_shadows = true
-albedo_color = Color( 0.0235294, 0.282353, 0.435294, 1 )
+extents = Vector3( 0.4, 1, 0.4 )
 
 [sub_resource type="SphereShape" id=82]
 radius = 0.75
+
+[sub_resource type="SpatialMaterial" id=83]
+albedo_color = Color( 0.0235294, 0.282353, 0.435294, 1 )
 
 [node name="SampleGhost3" type="KinematicBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 63.2625, 0.5, -3.109 )
@@ -26,10 +22,6 @@ script = ExtResource( 1 )
 [node name="CollisionShape" type="CollisionShape" parent="."]
 shape = SubResource( 6 )
 disabled = true
-
-[node name="MeshInstance" type="MeshInstance" parent="."]
-mesh = SubResource( 7 )
-material/0 = SubResource( 81 )
 
 [node name="Ghost3Timer" type="Timer" parent="."]
 wait_time = 7.0
@@ -43,5 +35,25 @@ shape = SubResource( 82 )
 [node name="GhostSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
 
+[node name="SpotLight" type="SpotLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0 )
+light_color = Color( 0.0980392, 0.627451, 0.713726, 1 )
+light_energy = 10.0
+spot_range = 10.0
+spot_angle = 20.0
+
+[node name="Ghost" parent="." instance=ExtResource( 3 )]
+transform = Transform( -0.5, 0, 4.37114e-08, 0, 0.5, 0, -4.37114e-08, 0, -0.5, 0, -0.6, 0 )
+
+[node name="Icosphere001" parent="Ghost" index="0"]
+cast_shadow = 0
+material/0 = SubResource( 83 )
+
+[node name="AnimationPlayer" parent="Ghost" index="1"]
+autoplay = "IcosphereAction"
+
 [connection signal="timeout" from="Ghost3Timer" to="." method="_on_Ghost3Timer_timeout"]
 [connection signal="body_entered" from="GhostArea" to="." method="_on_GhostArea_body_entered"]
+[connection signal="animation_finished" from="Ghost/AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+
+[editable path="Ghost"]
