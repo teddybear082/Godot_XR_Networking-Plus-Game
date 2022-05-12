@@ -22,5 +22,6 @@ uv1_triplanar = true
 shape = SubResource( 2 )
 
 [node name="MeshInstance" type="MeshInstance" parent="." index="1"]
+use_in_baked_light = true
 mesh = SubResource( 1 )
 material/0 = SubResource( 3 )

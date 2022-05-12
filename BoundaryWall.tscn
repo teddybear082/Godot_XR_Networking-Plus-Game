@@ -11,9 +11,11 @@ size = Vector3( 60, 5, 1 )
 
 [sub_resource type="SpatialMaterial" id=3]
 flags_unshaded = true
+flags_world_triplanar = true
 albedo_texture = ExtResource( 2 )
-uv1_scale = Vector3( 30, 6, 30 )
-uv2_scale = Vector3( 30, 6, 30 )
+uv1_scale = Vector3( 0.5, 0.5, 0.5 )
+uv1_triplanar = true
+uv2_triplanar = true
 
 [node name="BoundaryWall" instance=ExtResource( 1 )]
 collision_layer = 4097

@@ -215,7 +215,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.54476, 0.448397, -0.996403 
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.925065, -0.301336, 0.231195, 0.0305464, 0.66577, 0.745531, -0.378578, -0.682603, 0.625085, 3.30504, 8.65411, 0 )
-shadow_enabled = true
 
 [node name="BoundaryWall" parent="." instance=ExtResource( 21 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 30.5, 2.5, 0 )
