@@ -12,7 +12,7 @@ export var pellet_value := 100
 export var ghost_value := 1000
 export var fruit_value := 500
 export var energizer_value := 200
-onready var arvrorigin = get_owner().get_node("ARVROrigin")
+onready var arvrorigin = get_owner().get_node("FPController")
 onready var start_position = get_owner().get_node("PacManStart1")
 signal game_over
 signal player_data_changed(new_lives, new_score)

@@ -11,7 +11,7 @@ var normal_material = null
 export var escape = false
 
 onready var ghost = self
-onready var target = get_owner().get_node("ARVROrigin/PlayerBody/KinematicBody")
+onready var target = get_owner().get_node("FPController/PlayerBody/KinematicBody")
 onready var nav = get_owner().get_node("Navigation")
 onready var player_properties = get_owner().get_node("PlayerProperties")
 
@@ -56,8 +56,8 @@ func _on_Ghost4Timer_timeout():
 
 
 func _on_GhostArea_body_entered(body):
-	var player_body = get_owner().get_node("ARVROrigin/PlayerBody/KinematicBody")
-	var arvrorigin = get_owner().get_node("ARVROrigin")
+	var player_body = get_owner().get_node("FPController/PlayerBody/KinematicBody")
+	var arvrorigin = get_owner().get_node("FPController")
 	if body != player_body:
 		return
 	if body == player_body:

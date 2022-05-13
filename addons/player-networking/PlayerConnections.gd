@@ -2,9 +2,9 @@ extends ColorRect
 
 # command for running locally on the unix partition
 # /mnt/c/Users/henry/godot/Godot_v3.2.3-stable_linux_server.64 --main-pack /mnt/c/Users/henry/godot/games/OQ_Networking_Demo/releases/OQ_Networking_Demo.pck
-export var playernodepath : NodePath = "/root/Main/Players"
-onready var playerframelocalgdscriptfile = get_parent().filename.get_base_dir() + "/PlayerFrameLocal.gd"
-onready var playerframeremotegdscriptfile = get_parent().filename.get_base_dir() + "/PlayerFrameRemote.gd"
+export var playernodepath : NodePath = "/root/Main/XR-Tools-Networking/Players"
+onready var playerframelocalgdscriptfile = "res://addons/player-networking/PlayerFrameLocal.gd"
+onready var playerframeremotegdscriptfile = "res://addons/player-networking/PlayerFrameRemote.gd"
 
 onready var PlayersNode = get_node(playernodepath)
 var LocalPlayer = null

@@ -4,7 +4,7 @@ extends MeshInstance
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-onready var player_body = get_owner().get_node("ARVROrigin/PlayerBody/KinematicBody")
+onready var player_body = get_owner().get_node("FPController/PlayerBody/KinematicBody")
 onready var energizer_sound = get_owner().get_node("Energizers/EnergizerSound")
 onready var player_properties = get_owner().get_node("PlayerProperties")
 signal energizer_eaten

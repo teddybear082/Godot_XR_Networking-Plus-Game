@@ -18,6 +18,7 @@ transform = Transform( 0.00455528, 0, 0.99999, 0, 1, 0, -0.99999, 0, 0.00455528,
 collision_layer = 3
 collision_mask = 3
 input_ray_pickable = false
+press_to_hold = false
 
 [node name="PickupCenter" parent="." index="0"]
 transform = Transform( -0.00888364, 0, 0.999961, 0, 1, 0, -0.999961, 0, -0.00888364, 0.06, 0.107, -0.015 )

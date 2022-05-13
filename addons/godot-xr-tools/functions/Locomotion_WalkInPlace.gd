@@ -56,8 +56,8 @@ var move_checker = null;
 ##New TB code, create global variables for ARVROrigin, Camera and Controllers in case needed in code
 onready var fp_controller = get_parent()
 onready var vr_camera = get_parent().get_node("ARVRCamera")
-onready var l_controller = get_parent().get_node("ARVRController_Left")
-onready var r_controller = get_parent().get_node("ARVRController_Right")
+onready var l_controller = get_parent().get_node("LeftHandController")
+onready var r_controller = get_parent().get_node("RightHandController")
 onready var player_body = get_parent().get_node("PlayerBody")
 
 signal step_low;
