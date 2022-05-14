@@ -1,5 +1,5 @@
 # Godot_XR_Networking-Plus-Game
- A test of Godot, networking, XR-tools modifications and Pac-Man-style gameplay
+ A test of Godot, networking, XR-tools modifications and Pac-Man-style gameplay for learning purposes
 
 
 Uses Godot OpenXR asset: https://github.com/GodotVR/godot_openxr
@@ -22,10 +22,30 @@ https://opengameart.org/content/8-bit-sound-effect-pack
 
 CodeManu: https://opengameart.org/content/platformer-game-music-pack
 
-
 Sword model from Sketchfab:https://skfb.ly/6WQ87, by Fermin Morales
 
 Pac-Man-style level model from Sketchfab: https://skfb.ly/6XGYL by phamducphuc94
+
+**INSTALLATION**
+
+Quest native - download APK and signature file to your hard drive, use sidequest's feature to install a local APK to your quest by selecting the files
+
+PCVR/OpenXR - download the zip and unzip the directory anywhere.  Run the .exe file.  Your VR Software should boot up and start you in the game.  *In theory,* should work with all VR headsets; tested with Quest / Virtual Desktop.  You need a PCVR-ready PC.
+
+If you use Virtual Desktop, make sure you have SteamVR set as your OpenXR runtime.
+
+
+**MULTI-PLAYER (Experimental, and see "Known Issues" at bottom)
+
+When you boot into the game you can see a networking debug menu in front of you. 
+
+If you have two headsets you can play local multiplayer by going to the top left drop down menu and choosing "ENet" and going to the top right menu and choosing one person "as server" and the other person as "Local Network."   
+
+In theory, both of you should then connect to the game together.
+
+If you want to play with someone online, keep the network option in the top left corner at its default (WebRTC/MQTT) and in the top right corner both choose "as necessary." In theory one person should be assigned automatically as the server and the other as the client and connect.
+
+*There's only been very limited testing on this, and objects/ghosts do not sync, only the other player's avatars.* So for now, think of it like you are in parallel universes with a bridge between you...
 
 
 **CONTROLS:**
