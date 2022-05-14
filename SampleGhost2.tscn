@@ -8,7 +8,6 @@
 extents = Vector3( 0.4, 1, 0.4 )
 
 [sub_resource type="SphereShape" id=83]
-radius = 0.75
 
 [sub_resource type="SpatialMaterial" id=84]
 flags_do_not_receive_shadows = true
@@ -28,6 +27,7 @@ wait_time = 5.0
 autostart = true
 
 [node name="GhostArea" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0 )
 
 [node name="PlayerHitBox" type="CollisionShape" parent="GhostArea"]
 shape = SubResource( 83 )

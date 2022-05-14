@@ -8,7 +8,6 @@
 extents = Vector3( 0.4, 1, 0.4 )
 
 [sub_resource type="SphereShape" id=93]
-radius = 0.75
 
 [sub_resource type="SpatialMaterial" id=94]
 albedo_color = Color( 0.784314, 0.839216, 0.14902, 1 )
@@ -25,6 +24,7 @@ wait_time = 9.0
 autostart = true
 
 [node name="GhostArea" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0 )
 
 [node name="PlayerHitBox" type="CollisionShape" parent="GhostArea"]
 shape = SubResource( 93 )

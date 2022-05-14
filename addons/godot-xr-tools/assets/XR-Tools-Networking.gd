@@ -10,7 +10,8 @@ export var QUESTstartupprotocol = "webrtc"
 export (NodePath) var fpcontroller_path
 export (NodePath) var leftcontroller_path
 export (NodePath) var rightcontroller_path
-
+export var left_hand_activate = false
+export var right_hand_activate = true
 
 enum Buttons {
 	VR_BUTTON_BY = 1,
@@ -79,7 +80,7 @@ func _ready():
 
 func vr_right_button_pressed(button: int):
 #	print("vr right button pressed ", button)
-	if button == networking_popup_menu_button:
+	if button == networking_popup_menu_button and right_hand_activate == true:
 		if $ViewportNetworkGateway.visible:
 			$ViewportNetworkGateway.visible = false
 		else:
@@ -91,7 +92,7 @@ func vr_right_button_pressed(button: int):
 
 func vr_left_button_pressed(button: int):
 #	print("vr left button pressed ", button)
-	if button == networking_popup_menu_button:
+	if button == networking_popup_menu_button and left_hand_activate == true:
 		if $ViewportNetworkGateway.visible:
 			$ViewportNetworkGateway.visible = false
 		else:
@@ -103,8 +104,10 @@ func vr_left_button_pressed(button: int):
 	
 func _physics_process(delta):
 	var lowestfloorheight = -30
+	var maxfloorheight = 60
 	if _fpcontroller.transform.origin.y < lowestfloorheight:
 		_fpcontroller.transform.origin = Vector3(0, 2, 0)
-		
+	if _fpcontroller.transform.origin.y > maxfloorheight:
+		_fpcontroller.transform.origin = Vector3(0, 2, 0)	
 		
 			

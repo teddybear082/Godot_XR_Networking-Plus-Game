@@ -17,6 +17,7 @@ onready var start_position = get_owner().get_node("PacManStart1")
 signal game_over
 signal player_data_changed(new_lives, new_score)
 # Called when the node enters the scene tree for the first time.
+
 func _ready():
 	score = 0 # Replace with function body.
 	last_score = 0
@@ -41,16 +42,21 @@ func _process(delta):
 	if lives < last_lives:
 		emit_signal("player_data_changed", lives, score)
 		last_lives = lives
-		arvrorigin.global_transform.origin = start_position.global_transform.origin
+		arvrorigin.transform.origin = start_position.global_transform.origin #wss global
 	#player lost all lives, game over	
 	if lives == 0:
-		emit_signal("game_over")
-		print("Game over!")
-		$PlayerSound.play()
-		new_game()
+		game_over() 
 		
-		
-		
+	#handle if player collected all pellets; rather than resetting score and lives, just put pellets back into place and reset ghost and player position	
+	var pellet_count = 0
+	var pellets = get_tree().get_nodes_in_group("pellets")
+	for each_pellet in pellets:
+		if each_pellet.visible == true:
+			pellet_count+=1
+	if pellet_count == 0:
+		get_tree().call_group("pellets", "new_game")
+		reset_ghost_positions()
+			
 func new_game():
 		print("New game is starting")
 		
@@ -61,15 +67,26 @@ func new_game():
 		last_score = 0
 		
 		#put player at the start of the game board
-		arvrorigin.global_transform.origin = start_position.global_transform.origin
+		arvrorigin.transform.origin = start_position.global_transform.origin
 		
 		#update score board
 		emit_signal("player_data_changed", lives, score)
 		
-		#put each ghost back where they should start
-		var ghosts = get_tree().get_nodes_in_group("ghosts")
-		for each_ghost in ghosts:
-			each_ghost.global_transform.origin = each_ghost.ghost_starting_position
+		#reset ghost positions
+		reset_ghost_positions()
 			
 		#put all pellets back where they should start
 		get_tree().call_group("pellets", "new_game")
+
+#handle game over
+func game_over():
+	emit_signal("game_over")
+	print("Game over!")
+	$PlayerSound.play()
+	new_game()
+
+#put each ghost back where they should start	
+func reset_ghost_positions():
+	var ghosts = get_tree().get_nodes_in_group("ghosts")
+	for each_ghost in ghosts:
+		each_ghost.global_transform.origin = each_ghost.ghost_starting_position
