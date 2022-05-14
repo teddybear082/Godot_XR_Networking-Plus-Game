@@ -111,3 +111,4 @@ func _physics_process(delta):
 		_fpcontroller.transform.origin = Vector3(0, 2, 0)	
 		
 			
+#can revert to mqtt.dynamicdevices.co.uk for mqtt server name if necessary.

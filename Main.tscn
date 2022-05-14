@@ -892,6 +892,7 @@ right_pickup = NodePath("../RightHandController/Function_Pickup")
 [node name="Function_Glide_movement" parent="FPController" instance=ExtResource( 20 )]
 
 [node name="XR-Tools-Networking" parent="." instance=ExtResource( 8 )]
+webrtcbroker = "test.mosquitto.org"
 
 [node name="HeadCam" parent="XR-Tools-Networking/Players/VRPlayerAvatar" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
