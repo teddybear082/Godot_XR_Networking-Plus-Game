@@ -28,14 +28,14 @@ Pac-Man-style level model from Sketchfab: https://skfb.ly/6XGYL by phamducphuc94
 
 **INSTALLATION**
 
-Quest native - download APK and signature file to your hard drive, use sidequest's feature to install a local APK to your quest by selecting the files
+*Quest native* - download APK and signature file to your hard drive, use sidequest's feature to install a local APK to your quest by selecting the files
 
-PCVR/OpenXR - download the zip and unzip the directory anywhere.  Run the .exe file.  Your VR Software should boot up and start you in the game.  *In theory,* should work with all VR headsets; tested with Quest / Virtual Desktop.  You need a PCVR-ready PC.
+*PCVR/OpenXR* - download the zip and unzip the directory anywhere.  Run the .exe file.  Your VR Software should boot up and start you in the game.  *In theory,* should work with all VR headsets; tested with Quest / Virtual Desktop.  You need a PCVR-ready PC.
 
 If you use Virtual Desktop, make sure you have SteamVR set as your OpenXR runtime.
 
 
-**MULTI-PLAYER (Experimental, and see "Known Issues" at bottom)
+**MULTI-PLAYER (Experimental, and see "Known Issues" at bottom)**
 
 When you boot into the game you can see a networking debug menu in front of you. 
 
@@ -70,6 +70,7 @@ Pull your sword out of its holster by positioning your hands around your shoulde
 
 You can cut a lot of the blocks and rocks with your swords.
 
+
 **PELLET-MAN:**
 
 Travel to the area with the long ladder and click the "new game" button with your trigger while highlighted to start a new "Pellet-man" game. You can also just jump/fly into the arena.
@@ -80,11 +81,13 @@ See how many levels you can earn!
 
 See how long you can last physically jogging away from the ghosts instead of using your thumbstick!
 
+
 **QUIT:**
 
 Travel to the area with the long ladder and click the "QUIT" button to exit the entire game.
 
 (If you're in Pellet-Man, you have to find your way to the exit and climb out first!)
+
 
 **KNOWN ISSUES:**
 
@@ -101,3 +104,5 @@ Travel to the area with the long ladder and click the "QUIT" button to exit the 
 -No left hand controls yet
 
 -No controller oriented movement, only HMD movement.
+
+-And many more since I'm just learning..
