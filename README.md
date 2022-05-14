@@ -28,13 +28,15 @@ Sword model from Sketchfab:https://skfb.ly/6WQ87, by Fermin Morales
 Pac-Man-style level model from Sketchfab: https://skfb.ly/6XGYL by phamducphuc94
 
 
-CONTROLS:
+**CONTROLS:**
 
-Move character with left thumbstick or just use experimental "jog in place" movement in real life to move
+Move character with left thumbstick or **just use experimental "jog in place" movement in real life to move**
 
 Sprint (toggle) by clicking left thumbstick
 
 Jump by clicking right thumbstick
+
+Turn in real life or with right thumb stick.  To switch to smooth turn go to the menu by the big ladder and select smooth turning on.
 
 Grappling hook movement enabled on both hands, use left hand X button or right hand A button to fire grapples
 
@@ -48,16 +50,34 @@ Pull your sword out of its holster by positioning your hands around your shoulde
 
 You can cut a lot of the blocks and rocks with your swords.
 
-PELLET-MAN:
+**PELLET-MAN:**
 
-Travel to the area with the long ladder and click the "new game" button while highlighted to start a new "Pellet-man" game. You can also just jump/fly into the arena.
+Travel to the area with the long ladder and click the "new game" button with your trigger while highlighted to start a new "Pellet-man" game. You can also just jump/fly into the arena.
 
-QUIT:
+Keep track of your score and lives with your left hand wrist HUD
+
+See how many levels you can earn!
+
+See how long you can last physically jogging away from the ghosts instead of using your thumbstick!
+
+**QUIT:**
 
 Travel to the area with the long ladder and click the "QUIT" button to exit the entire game.
 
-KNOWN ISSUES:
+(If you're in Pellet-Man, you have to find your way to the exit and climb out first!)
+
+**KNOWN ISSUES:**
 
 -Pellets, objects and ghosts do not sync in multiplayer (players are essentially in their own parallel universes; they can see eachother but not how the other impacts the world
+
+-No VOIP
+
 -A lot of jankiness
--No "level" system yet, although if you collect all the pellets, the pellets in theory should respawn and ghost positions should be reset but I haven't won yet!
+
+-Ghost movement could be improved to be closer to its "inspiration"
+
+-Level system should increase your level each time you clear the board but right now it does not impact gameplay (example: ghosts and pacman remain the same speed)
+
+-No left hand controls yet
+
+-No controller oriented movement, only HMD movement.
