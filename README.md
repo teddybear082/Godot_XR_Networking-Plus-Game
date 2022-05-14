@@ -55,3 +55,9 @@ Travel to the area with the long ladder and click the "new game" button while hi
 QUIT:
 
 Travel to the area with the long ladder and click the "QUIT" button to exit the entire game.
+
+KNOWN ISSUES:
+
+-Pellets, objects and ghosts do not sync in multiplayer (players are essentially in their own parallel universes; they can see eachother but not how the other impacts the world
+-A lot of jankiness
+-No "level" system yet, although if you collect all the pellets, the pellets in theory should respawn and ghost positions should be reset but I haven't won yet!
