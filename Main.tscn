@@ -1,5 +1,6 @@
-[gd_scene load_steps=52 format=2]
+[gd_scene load_steps=53 format=2]
 
+[ext_resource path="res://sounds/level_up.ogg" type="AudioStream" id=1]
 [ext_resource path="res://addons/godot-xr-tools/misc/VR_Common_Shader_Cache.tscn" type="PackedScene" id=2]
 [ext_resource path="res://addons/godot-xr-tools/functions/Function_Jump_movement.tscn" type="PackedScene" id=3]
 [ext_resource path="res://addons/godot-xr-tools/assets/PlayerBody.tscn" type="PackedScene" id=4]
@@ -274,8 +275,11 @@ collision/safe_margin = 0.005
 [node name="PlayerProperties" type="Node" parent="."]
 script = ExtResource( 39 )
 
-[node name="PlayerSound" type="AudioStreamPlayer" parent="PlayerProperties"]
+[node name="PlayerGameOverSound" type="AudioStreamPlayer" parent="PlayerProperties"]
 stream = ExtResource( 45 )
+
+[node name="PlayerNextLevelSound" type="AudioStreamPlayer" parent="PlayerProperties"]
+stream = ExtResource( 1 )
 
 [node name="Pellets" type="Node" parent="."]
 
@@ -820,7 +824,7 @@ far = 1000.0
 [node name="vr_common_shader_cache" parent="FPController/ARVRCamera" index="0" instance=ExtResource( 2 )]
 
 [node name="TestGrabArea" parent="FPController/ARVRCamera" index="1" instance=ExtResource( 12 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.2 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.25 )
 holstered_object = ExtResource( 26 )
 left_pickup = NodePath("../../LeftHandController/Function_Pickup")
 right_pickup = NodePath("../../RightHandController/Function_Pickup")
@@ -835,6 +839,7 @@ visible = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03, -0.05, 0.15 )
 
 [node name="WristHUDViewport" parent="FPController/LeftHandController/LeftHand" instance=ExtResource( 46 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12, 0, 0 )
 
 [node name="Function_Direct_movement" parent="FPController/LeftHandController" index="1" instance=ExtResource( 5 )]
 move_type = 1
