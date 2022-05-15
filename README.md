@@ -54,9 +54,9 @@ Move character with left thumbstick or **just use experimental "jog in place" mo
 
 Sprint (toggle) by clicking left thumbstick
 
-Jump by clicking right thumbstick
+Jump by clicking right thumbstick.  **When you jump, you also activate "bullet time" for a second or two.**  Try some "epic" jumps between platforms!  Or jump-cut some blocks or rocks  with your sword :)
 
-Turn in real life or with right thumb stick.  To switch to smooth turn go to the menu by the big ladder and select smooth turning on.
+Turn in real life or with right thumb stick.  You begin with snap turn.  To switch to smooth turn go to the menu by the big ladder and select smooth turning on.
 
 Grappling hook movement enabled on both hands, use left hand X button or right hand A button to fire grapples
 
