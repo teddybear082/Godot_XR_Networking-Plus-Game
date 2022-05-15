@@ -83,9 +83,9 @@ func physics_movement(delta: float, player_body: PlayerBody):
 	jump_count += 1
 	
 	#new code for bullet time jumping
-	Engine.time_scale = .2
-	yield(get_tree().create_timer(1.5), "timeout")
-	Engine.time_scale = 1
+#	Engine.time_scale = .2
+#	yield(get_tree().create_timer(1.5), "timeout")
+#	Engine.time_scale = 1
 
 # This method verifies the MovementProvider has a valid configuration.
 func _get_configuration_warning():

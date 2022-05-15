@@ -10,6 +10,11 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "MovementProvider",
+"class": "Function_BulletTime_movement",
+"language": "GDScript",
+"path": "res://addons/godot-xr-tools/functions/Function_BulletTime_movement.gd"
+}, {
+"base": "MovementProvider",
 "class": "Function_ClimbMovement",
 "language": "GDScript",
 "path": "res://addons/godot-xr-tools/functions/Function_Climb_movement.gd"
@@ -130,6 +135,7 @@ _global_script_classes=[ {
 "path": "res://addons/slicer/sliceable_geo.gd"
 } ]
 _global_script_class_icons={
+"Function_BulletTime_movement": "",
 "Function_ClimbMovement": "",
 "Function_DirectMovement": "",
 "Function_DirectMovement_Turn_Only": "",

@@ -37,7 +37,7 @@ If you use Virtual Desktop, make sure you have SteamVR set as your OpenXR runtim
 
 **MULTI-PLAYER (Experimental, and see "Known Issues" at bottom)**
 
-When you boot into the game you can see a networking debug menu in front of you. 
+When you boot into the game you can see a networking debug menu in front of you. You can hide it or bring it up again by pressing the left controller Y button.
 
 If you have two headsets you can play local multiplayer by going to the top left drop down menu and choosing "ENet" and going to the top right menu and choosing one person "as server" and the other person as "Local Network."   
 
@@ -54,7 +54,9 @@ Move character with left thumbstick or **just use experimental "jog in place" mo
 
 Sprint (toggle) by clicking left thumbstick
 
-Jump by clicking right thumbstick.  **When you jump, you also activate "bullet time" for a second or two.**  Try some "epic" jumps between platforms!  Or jump-cut some blocks or rocks  with your sword :)
+**Bullet Time** on and off by pressing the Y button on your right controller.  On its own, if you do not end it yourself, bullet time only lasts for a second or two. 
+
+Jump by clicking right thumbstick.  **When you jump, you can also activate "bullet time" for a second or two.**  Try some "epic" jumps between platforms!  Or jump-cut some blocks or rocks  with your sword :)
 
 Turn in real life or with right thumb stick.  You begin with snap turn.  To switch to smooth turn go to the menu by the big ladder and select smooth turning on.
 

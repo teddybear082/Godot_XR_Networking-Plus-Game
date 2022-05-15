@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=2]
+[gd_scene load_steps=55 format=2]
 
 [ext_resource path="res://sounds/level_up.ogg" type="AudioStream" id=1]
 [ext_resource path="res://addons/godot-xr-tools/misc/VR_Common_Shader_Cache.tscn" type="PackedScene" id=2]
@@ -10,9 +10,11 @@
 [ext_resource path="res://addons/godot-xr-tools/assets/XR-Tools-Networking.tscn" type="PackedScene" id=8]
 [ext_resource path="res://addons/godot-openxr/scenes/first_person_controller_vr.tscn" type="PackedScene" id=9]
 [ext_resource path="res://addons/godot-xr-tools/assets/RightHand.tscn" type="PackedScene" id=10]
+[ext_resource path="res://addons/godot-xr-tools/functions/Function_BulletTime_movement.tscn" type="PackedScene" id=11]
 [ext_resource path="res://addons/godot-xr-tools/functions/TestGrabArea.tscn" type="PackedScene" id=12]
 [ext_resource path="res://addons/godot-xr-tools/functions/Function_Pickup.tscn" type="PackedScene" id=13]
 [ext_resource path="res://SportBall.tscn" type="PackedScene" id=14]
+[ext_resource path="res://sounds/WarpDrive_02.mp3" type="AudioStream" id=15]
 [ext_resource path="res://addons/godot-xr-tools/functions/Function_Direct_movement_turn_only.tscn" type="PackedScene" id=16]
 [ext_resource path="res://addons/godot-xr-tools/functions/Function_Grapple.tscn" type="PackedScene" id=17]
 [ext_resource path="res://textures/ropematerial.tres" type="Material" id=18]
@@ -248,10 +250,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.08277, 0, 8.63076 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.44687, 0, -5.18375 )
 
 [node name="SliceRock3" parent="." instance=ExtResource( 33 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.50051, 0, 3.00217 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.6116, 0, 4.04471 )
 
 [node name="SliceRock2" parent="." instance=ExtResource( 33 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.08277, 0, 10.5495 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.71669, 0, 10.5495 )
 
 [node name="Navigation" parent="." instance=ExtResource( 36 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.33195, 0, 0 )
@@ -885,6 +887,12 @@ show_laser = false
 
 [node name="Function_Pickup" parent="FPController/RightHandController" index="5" instance=ExtResource( 13 )]
 
+[node name="Function_BulletTime_movement" parent="FPController/RightHandController" index="6" instance=ExtResource( 11 )]
+slo_mo_time = 1.25
+
+[node name="SloMo_Sound" parent="FPController/RightHandController/Function_BulletTime_movement" index="1"]
+stream = ExtResource( 15 )
+
 [node name="PlayerBody" parent="FPController" instance=ExtResource( 4 )]
 
 [node name="Locomotion_WalkInPlace" parent="FPController" instance=ExtResource( 28 )]
@@ -898,6 +906,8 @@ right_pickup = NodePath("../RightHandController/Function_Pickup")
 [node name="XR-Tools-Networking" parent="." instance=ExtResource( 8 )]
 webrtcroomname = "pelletman"
 webrtcbroker = "test.mosquitto.org"
+left_hand_activate = true
+right_hand_activate = false
 
 [node name="HeadCam" parent="XR-Tools-Networking/Players/VRPlayerAvatar" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
@@ -916,5 +926,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03, -0.05, 0.15 )
 [editable path="FPController/RightHandController/RightHand"]
 [editable path="FPController/RightHandController/RightHand/RightHand"]
 [editable path="FPController/RightHandController/Function_Grapple"]
+[editable path="FPController/RightHandController/Function_BulletTime_movement"]
 [editable path="XR-Tools-Networking"]
 [editable path="XR-Tools-Networking/Players/VRPlayerAvatar"]
