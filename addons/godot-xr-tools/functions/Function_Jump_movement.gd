@@ -82,6 +82,10 @@ func physics_movement(delta: float, player_body: PlayerBody):
 	player_body.velocity.y = current_jump_velocity * ARVRServer.world_scale
 	jump_count += 1
 	
+	#new code for bullet time jumping
+	Engine.time_scale = .2
+	yield(get_tree().create_timer(1.5), "timeout")
+	Engine.time_scale = 1
 
 # This method verifies the MovementProvider has a valid configuration.
 func _get_configuration_warning():

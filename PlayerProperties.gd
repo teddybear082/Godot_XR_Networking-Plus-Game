@@ -90,6 +90,7 @@ func game_over():
 	print("Game over!")
 	$PlayerGameOverSound.play()
 	new_game()
+	
 
 #put each ghost back where they should start	
 func reset_ghost_positions():
