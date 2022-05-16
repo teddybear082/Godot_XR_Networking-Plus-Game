@@ -26,6 +26,8 @@ Sword model from Sketchfab:https://skfb.ly/6WQ87, by Fermin Morales
 
 Pac-Man-style level model from Sketchfab: https://skfb.ly/6XGYL by phamducphuc94
 
+Arcade machine model from Sketchfab: https://skfb.ly/Q69Oby Daniel Bruck
+
 **INSTALLATION**
 
 *Quest native* - download APK and signature file to your hard drive, use sidequest's feature to install a local APK to your quest by selecting the files
