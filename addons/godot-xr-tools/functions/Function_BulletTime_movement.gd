@@ -85,12 +85,11 @@ func physics_movement(delta: float, player_body: PlayerBody):
 			
 		if is_bullet_time == false:	
 			emit_signal("bullet_time_off")
-			$SloMo_Sound.play()
 			$SloMo_Tween.stop_all()
 			$SloMo_Tween.interpolate_property(Engine, "time_scale", Engine.time_scale, normal_time_scale, slo_mo_ease, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
 			$SloMo_Tween.start()
 			yield($SloMo_Tween, "tween_completed")
-				
+			$SloMo_Sound.play()	
 	
 
 

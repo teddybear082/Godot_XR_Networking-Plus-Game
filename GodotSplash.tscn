@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://addons/godot-xr-tools/assets/RightHand.tscn" type="PackedScene" id=1]
+[ext_resource path="res://addons/godot-openxr/scenes/first_person_controller_vr.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/godot-xr-tools/assets/LeftHand.tscn" type="PackedScene" id=3]
+[ext_resource path="res://GodotSplash.gd" type="Script" id=4]
+[ext_resource path="res://OQ_SplashScreen.tscn" type="PackedScene" id=5]
+
+[sub_resource type="Environment" id=1]
+
+[node name="GodotSplash" type="Spatial"]
+script = ExtResource( 4 )
+
+[node name="OQ_SplashScreen" parent="." instance=ExtResource( 5 )]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 1 )
+
+[node name="FPController" parent="." instance=ExtResource( 2 )]
+
+[node name="ARVRCamera" parent="FPController" index="1"]
+far = 1000.0
+
+[node name="LeftHand" parent="FPController/LeftHandController" index="0" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03, -0.05, 0.15 )
+
+[node name="RightHand" parent="FPController/RightHandController" index="0" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03, -0.05, 0.15 )
+
+[editable path="FPController"]
