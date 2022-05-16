@@ -39,7 +39,7 @@ If you use Virtual Desktop, make sure you have SteamVR set as your OpenXR runtim
 
 **MULTI-PLAYER (Experimental, and see "Known Issues" at bottom)**
 
-When you boot into the game you can see a networking debug menu in front of you. You can hide it or bring it up again by pressing the left controller Y button.
+*Once you get into the "real game"* you can see a networking debug menu in front of you. You can hide it or bring it up again by pressing the left controller Y button.
 
 If you have two headsets you can play local multiplayer by going to the top left drop down menu and choosing "ENet" and going to the top right menu and choosing one person "as server" and the other person as "Local Network."   
 
@@ -52,7 +52,7 @@ If you want to play with someone online, keep the network option in the top left
 
 **CONTROLS:**
 
-Move character with left thumbstick or **just use experimental "jog in place" movement in real life to move**
+Move character with left thumbstick or **just use experimental "jog in place" movement in real life to move, once you get into the "real game" ;) **
 
 Sprint (toggle) by clicking left thumbstick
 
@@ -70,7 +70,7 @@ Glide when you are in the air or jump off of a ledge by extending your arms out 
 
 Grab objects using grab buttons
 
-Pull your sword out of its holster by positioning your hands around your shoulder areas and pressing the trigger key.  Pressing the key again in the same area holsters the sword.
+Once you get into the "real game," pull your sword out of its holster by positioning your hands around your shoulder areas and pressing the trigger key.  Pressing the key again in the same area holsters the sword.
 
 You can cut a lot of the blocks and rocks with your swords.
 
