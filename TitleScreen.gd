@@ -18,7 +18,7 @@ func _process(delta):
 	if $FPController/LeftHandController.is_button_pressed(15) and $FPController/RightHandController.is_button_pressed(15):
 		get_tree().change_scene("res://Main.tscn")
 	if $FPController.transform.origin.y < -5:
-		$FPController.transform.origin = Vector3(3.8,31,-1.5)
+		$FPController.transform.origin = Vector3(3.8,31,-1.25)
 
 
 func _on_StartButtonArea_area_entered(area):
