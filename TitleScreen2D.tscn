@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://TitleScreen2D.gd" type="Script" id=1]
+[ext_resource path="res://fonts/Tytoon Mist.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 2 )
 
 [node name="TitleScreen2D" type="Control"]
 anchor_right = 1.0
@@ -14,6 +19,8 @@ margin_bottom = 1080.0
 [node name="RichTextLabel" type="RichTextLabel" parent="TextureRect"]
 margin_left = 864.0
 margin_top = 688.0
-margin_right = 1164.0
-margin_bottom = 888.0
+margin_right = 1464.0
+margin_bottom = 1088.0
+custom_colors/default_color = Color( 0.835294, 0.823529, 0.0666667, 1 )
+custom_fonts/normal_font = SubResource( 1 )
 text = "test TEXT"
