@@ -819,6 +819,7 @@ mass = 5.10204
 gravity_scale = 2.0
 
 [node name="FPController" parent="." instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.3977, 0, 0 )
 
 [node name="ARVRCamera" parent="FPController" index="1"]
 far = 1000.0
