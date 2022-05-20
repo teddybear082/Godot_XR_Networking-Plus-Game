@@ -2,6 +2,10 @@
  A test of Godot, networking, XR-tools modifications and Pac-Man-style gameplay for learning purposes
 
 
+<img src="./pelletman_gif.gif" alt="Pellet-Man GIF" width="800" height="450">
+
+
+
 Uses Godot OpenXR asset: https://github.com/GodotVR/godot_openxr
 
 Uses modified tools from https://github.com/GodotVR/godot-xr-tools
