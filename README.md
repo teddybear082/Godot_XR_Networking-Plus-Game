@@ -50,9 +50,11 @@ If you want to play with someone online, keep the network option in the top left
 *There's only been very limited testing on this, and objects/ghosts do not sync, only the other player's avatars.* So for now, think of it like you are in parallel universes with a bridge between you...
 
 
-**CONTROLS:**
+**DEFAULT CONTROLS:**
 
 Move character with left thumbstick or **just use experimental "jog in place" movement in real life to move, once you get into the "real game" ;) **
+
+Select options in menus with your right controller and then press trigger
 
 Sprint (toggle) by clicking left thumbstick
 
@@ -60,7 +62,7 @@ Sprint (toggle) by clicking left thumbstick
 
 Jump by clicking right thumbstick.  **When you jump, you can also activate "bullet time" for a second or two.**  Try some "epic" jumps between platforms!  Or jump-cut some blocks or rocks  with your sword :)
 
-Turn in real life or with right thumb stick.  You begin with snap turn.  To switch to smooth turn go to the menu by the big ladder and select smooth turning on.
+Turn in real life or with right thumb stick.  You begin with snap turn.  
 
 Grappling hook movement enabled on both hands, use left hand X button or right hand A button to fire grapples
 
@@ -75,6 +77,12 @@ Once you get into the "real game," pull your sword out of its holster by positio
 You can cut a lot of the blocks and rocks with your swords.
 
 
+
+**SWITCHING CONTROLS**
+
+**You can adjust all of the controls except for the grabbing buttons and using your right hand as the pointer in the controls menu in the main game.  This includes switching hands, switching to teleport movement or changing turning to smooth turning.**
+
+
 **PELLET-MAN:**
 
 Travel to the area with the long ladder and click the "new game" button with your trigger while highlighted to start a new "Pellet-man" game. You can also just jump/fly into the arena.
@@ -83,7 +91,7 @@ Keep track of your score and lives with your left hand wrist HUD
 
 See how many levels you can earn!
 
-See how long you can last physically jogging away from the ghosts instead of using your thumbstick!
+See how long you can last physically jogging away from the ghosts instead of using your thumbstick or teleport!
 
 
 **QUIT:**
@@ -104,8 +112,6 @@ Travel to the area with the long ladder and click the "QUIT" button to exit the 
 -Ghost movement could be improved to be closer to its "inspiration"
 
 -Level system should increase your level each time you clear the board but right now it does not impact gameplay (example: ghosts and pacman remain the same speed)
-
--No left hand controls yet
 
 -No controller oriented movement, only HMD movement.
 
