@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=2]
+[gd_scene load_steps=56 format=2]
 
 [ext_resource path="res://sounds/level_up.ogg" type="AudioStream" id=1]
 [ext_resource path="res://addons/godot-xr-tools/misc/VR_Common_Shader_Cache.tscn" type="PackedScene" id=2]
@@ -47,6 +47,7 @@
 [ext_resource path="res://sounds/game_over.ogg" type="AudioStream" id=45]
 [ext_resource path="res://WristHUDViewport.tscn" type="PackedScene" id=46]
 [ext_resource path="res://PickableTV.tscn" type="PackedScene" id=47]
+[ext_resource path="res://ControlsViewport.tscn" type="PackedScene" id=48]
 
 [sub_resource type="PlaneMesh" id=2]
 size = Vector2( 60, 60 )
@@ -860,6 +861,20 @@ material = ExtResource( 18 )
 
 [node name="Function_Pickup" parent="FPController/LeftHandController" index="3" instance=ExtResource( 13 )]
 
+[node name="Function_Jump_movement" parent="FPController/LeftHandController" index="4" instance=ExtResource( 3 )]
+enabled = false
+jump_button_id = 15
+
+[node name="Function_Direct_movement_turn_only" parent="FPController/LeftHandController" index="5" instance=ExtResource( 16 )]
+enabled = false
+smooth_rotation = false
+
+[node name="Function_BulletTime_movement" parent="FPController/LeftHandController" index="6" instance=ExtResource( 11 )]
+enabled = false
+
+[node name="SloMo_Sound" parent="FPController/LeftHandController/Function_BulletTime_movement" index="1"]
+stream = ExtResource( 15 )
+
 [node name="RightHandController" parent="FPController" index="3"]
 visible = true
 
@@ -894,6 +909,11 @@ slo_mo_time = 1.25
 [node name="SloMo_Sound" parent="FPController/RightHandController/Function_BulletTime_movement" index="1"]
 stream = ExtResource( 15 )
 
+[node name="Function_Direct_movement" parent="FPController/RightHandController" index="7" instance=ExtResource( 5 )]
+enabled = false
+move_type = 1
+canFly = false
+
 [node name="PlayerBody" parent="FPController" instance=ExtResource( 4 )]
 
 [node name="Locomotion_WalkInPlace" parent="FPController" instance=ExtResource( 28 )]
@@ -919,11 +939,15 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03, -0.05, 0.15 )
 [node name="RightHand" parent="XR-Tools-Networking/Players/VRPlayerAvatar/HandRight" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03, -0.05, 0.15 )
 
+[node name="ControlsViewport" parent="." instance=ExtResource( 48 )]
+transform = Transform( 0.0260025, 0, -0.999662, 0, 1, 0, 0.999662, 0, 0.0260025, 29.3987, 1.37831, -2.33332 )
+
 [editable path="FPController"]
 [editable path="FPController/ARVRCamera/TestGrabArea"]
 [editable path="FPController/LeftHandController/LeftHand"]
 [editable path="FPController/LeftHandController/LeftHand/LeftHand"]
 [editable path="FPController/LeftHandController/Function_Grapple"]
+[editable path="FPController/LeftHandController/Function_BulletTime_movement"]
 [editable path="FPController/RightHandController/RightHand"]
 [editable path="FPController/RightHandController/RightHand/RightHand"]
 [editable path="FPController/RightHandController/Function_Grapple"]

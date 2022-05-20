@@ -40,8 +40,4 @@ func _on_QuitButton_pressed():
 	get_tree().quit() # Replace with function body.
 
 
-func _on_CheckButton_toggled(button_pressed):
-	if player_turn.smooth_rotation == true:
-		player_turn.smooth_rotation = false
-	else:
-		player_turn.smooth_rotation = true # Replace with function body.
+

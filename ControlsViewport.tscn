@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/godot-xr-tools/objects/Viewport_2D_in_3D.tscn" type="PackedScene" id=1]
+[ext_resource path="res://ControlMapCanvas.tscn" type="PackedScene" id=2]
+
+[node name="ControlsViewport" instance=ExtResource( 1 )]
+screen_size = Vector2( 2, 2 )
+viewport_size = Vector2( 1024, 1024 )
+scene = ExtResource( 2 )
+
+[node name="Viewport" parent="." index="0"]
+size = Vector2( 1024, 1024 )
+
+[node name="StaticBody" parent="." index="2"]
+collision_layer = 1023
+screen_size = Vector2( 2, 2 )
+viewport_size = Vector2( 1024, 1024 )

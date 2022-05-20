@@ -1,13 +1,186 @@
-[gd_scene format=2]
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://UITheme.tres" type="Theme" id=1]
+[ext_resource path="res://textures/ui0340_iam.PNG" type="Texture" id=2]
+[ext_resource path="res://ControlMapCanvas.gd" type="Script" id=3]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 3 )
 
-[node name="TextureRect" type="TextureRect" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+[node name="ControllerTexture" type="TextureRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 1024.0
+texture = ExtResource( 2 )
+expand = true
 
-[node name="OptionButton" type="OptionButton" parent="TextureRect"]
-margin_right = 29.0
-margin_bottom = 20.0
+[node name="JumpOptionButton" type="OptionButton" parent="ControllerTexture"]
+anchor_left = 0.658203
+anchor_top = 0.492188
+anchor_right = 0.658203
+anchor_bottom = 0.492188
+margin_left = 122.0
+margin_top = 410.0
+margin_right = 218.0
+margin_bottom = 450.0
+custom_colors/font_color = Color( 0.835294, 0.823529, 0.0666667, 1 )
+text = "Jump"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="SmoothTurnCheckButton" type="CheckButton" parent="ControllerTexture"]
+margin_left = 377.0
+margin_top = 957.0
+margin_right = 668.0
+margin_bottom = 1027.0
+custom_colors/font_color = Color( 0.835294, 0.823529, 0.0666667, 1 )
+text = "Smooth Turn"
+
+[node name="MovementOptionButton" type="OptionButton" parent="ControllerTexture"]
+margin_left = 270.0
+margin_top = 729.0
+margin_right = 525.0
+margin_bottom = 768.0
+custom_colors/font_color = Color( 0.835294, 0.823529, 0.0666667, 1 )
+text = "Movement Type"
+
+[node name="HandOptionButton" type="OptionButton" parent="ControllerTexture"]
+margin_left = 268.0
+margin_top = 654.0
+margin_right = 516.0
+margin_bottom = 693.0
+custom_colors/font_color = Color( 0.835294, 0.823529, 0.0666667, 1 )
+text = "Movement Hand"
+
+[node name="LeftGrappleOptionButton" type="OptionButton" parent="ControllerTexture"]
+margin_left = 791.0
+margin_top = 659.0
+margin_right = 997.0
+margin_bottom = 698.0
+custom_colors/font_color = Color( 0.835294, 0.823529, 0.0666667, 1 )
+text = "Left Grapple"
+
+[node name="BulletOptionButton" type="OptionButton" parent="ControllerTexture"]
+margin_left = 794.0
+margin_top = 821.0
+margin_right = 995.0
+margin_bottom = 860.0
+custom_colors/font_color = Color( 0.835294, 0.823529, 0.0666667, 1 )
+text = "BULLET TIME"
+
+[node name="ControlLabel" type="RichTextLabel" parent="ControllerTexture"]
+margin_left = 360.0
+margin_top = 51.0
+margin_right = 660.0
+margin_bottom = 91.0
+text = "CONTROL OPTIONS"
+
+[node name="RightGrappleOptionButton" type="OptionButton" parent="ControllerTexture"]
+margin_left = 795.0
+margin_top = 732.0
+margin_right = 1016.0
+margin_bottom = 771.0
+custom_colors/font_color = Color( 0.835294, 0.823529, 0.0666667, 1 )
+text = "Right Grapple"
+
+[node name="HandLabel" type="RichTextLabel" parent="ControllerTexture"]
+margin_left = 21.0
+margin_top = 659.0
+margin_right = 370.0
+margin_bottom = 699.0
+text = "Movement Hand"
+
+[node name="MoveLabel" type="RichTextLabel" parent="ControllerTexture"]
+margin_left = 21.0
+margin_top = 729.0
+margin_right = 256.0
+margin_bottom = 769.0
+text = "Movement Type"
+
+[node name="LGrappleLabel" type="RichTextLabel" parent="ControllerTexture"]
+margin_left = 576.0
+margin_top = 661.0
+margin_right = 777.0
+margin_bottom = 701.0
+text = "Left Grapple"
+
+[node name="RGrappleLabel" type="RichTextLabel" parent="ControllerTexture"]
+margin_left = 574.0
+margin_top = 733.0
+margin_right = 805.0
+margin_bottom = 773.0
+text = "Right Grapple"
+
+[node name="BulletLabel" type="RichTextLabel" parent="ControllerTexture"]
+margin_left = 574.0
+margin_top = 820.0
+margin_right = 773.0
+margin_bottom = 860.0
+text = "Bullet Time"
+
+[node name="JumpLabel" type="RichTextLabel" parent="ControllerTexture"]
+margin_left = 574.0
+margin_top = 909.0
+margin_right = 667.0
+margin_bottom = 949.0
+text = "Jump"
+
+[node name="SprintLabel" type="RichTextLabel" parent="ControllerTexture"]
+margin_left = 21.0
+margin_top = 785.0
+margin_right = 168.0
+margin_bottom = 825.0
+text = "Sprint"
+
+[node name="SprintOptionButton" type="OptionButton" parent="ControllerTexture"]
+margin_left = 267.0
+margin_top = 785.0
+margin_right = 296.0
+margin_bottom = 824.0
+custom_colors/font_color = Color( 0.835294, 0.823529, 0.0666667, 1 )
+text = "Sprint"
+
+[node name="LHolsterLabel" type="RichTextLabel" parent="ControllerTexture"]
+margin_left = 21.0
+margin_top = 846.0
+margin_right = 243.0
+margin_bottom = 886.0
+text = "Left Holster"
+
+[node name="RHolsterLabel" type="RichTextLabel" parent="ControllerTexture"]
+margin_left = 19.0
+margin_top = 897.0
+margin_right = 233.0
+margin_bottom = 937.0
+text = "Right Holster"
+
+[node name="LHolsterOptionButton" type="OptionButton" parent="ControllerTexture"]
+margin_left = 267.0
+margin_top = 852.0
+margin_right = 502.0
+margin_bottom = 891.0
+custom_colors/font_color = Color( 0.835294, 0.823529, 0.0666667, 1 )
+text = "Left Holster"
+
+[node name="RHolsterOptionButton" type="OptionButton" parent="ControllerTexture"]
+margin_left = 267.0
+margin_top = 900.0
+margin_right = 499.0
+margin_bottom = 939.0
+custom_colors/font_color = Color( 0.835294, 0.823529, 0.0666667, 1 )
+text = "Right Holster"
+
+[connection signal="move_hand_changed" from="." to="." method="_on_Control_move_hand_changed"]
+[connection signal="item_selected" from="ControllerTexture/JumpOptionButton" to="." method="_on_JumpOptionButton_item_selected"]
+[connection signal="toggled" from="ControllerTexture/SmoothTurnCheckButton" to="." method="_on_SmoothTurnCheckButton_toggled"]
+[connection signal="item_selected" from="ControllerTexture/MovementOptionButton" to="." method="_on_MovementOptionButton_item_selected"]
+[connection signal="item_selected" from="ControllerTexture/HandOptionButton" to="." method="_on_HandOptionButton_item_selected"]
+[connection signal="item_selected" from="ControllerTexture/LeftGrappleOptionButton" to="." method="_on_LeftGrappleOptionButton_item_selected"]
+[connection signal="item_selected" from="ControllerTexture/BulletOptionButton" to="." method="_on_BulletOptionButton_item_selected"]
+[connection signal="item_selected" from="ControllerTexture/RightGrappleOptionButton" to="." method="_on_RightGrappleOptionButton_item_selected"]
+[connection signal="item_selected" from="ControllerTexture/SprintOptionButton" to="." method="_on_SprintOptionButton_item_selected"]
+[connection signal="item_selected" from="ControllerTexture/LHolsterOptionButton" to="." method="_on_LHolsterOptionButton_item_selected"]
+[connection signal="item_selected" from="ControllerTexture/RHolsterOptionButton" to="." method="_on_RHolsterOptionButton_item_selected"]

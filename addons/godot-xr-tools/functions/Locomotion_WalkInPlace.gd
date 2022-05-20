@@ -14,7 +14,7 @@ class_name Locomotion_WalkInPlace
 extends MovementProvider
 
 
-export var active := true;
+
 
 ## Movement provider order
 export var order := 5
@@ -224,7 +224,7 @@ func _move(dt):
 
 #Add'l TB note - maybe this should be physics_process??
 func _process(dt):
-	if (!active): return;
+	if enabled == false: return;
 		
 	var headset_height = player_body.camera_node.transform.origin.y + player_body.player_radius;
 	#TB Code: if the above equation doesn't work, note this used to be a reference to 
