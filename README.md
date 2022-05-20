@@ -2,7 +2,7 @@
  A test of Godot, networking, XR-tools modifications and Pac-Man-style gameplay for learning purposes
 
 
-<img src="./pelletman_gif.gif" alt="Pellet-Man GIF" width="800" height="450">
+<img src="./pelletman_gif_reduced_size.gif" alt="Pellet-Man GIF" width="800" height="450">
 
 
 
