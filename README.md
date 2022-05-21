@@ -26,9 +26,10 @@ See how long you can last physically jogging away from the ghosts instead of usi
 
 **Move**
 
-Move character with left thumbstick or **just use experimental "jog in place" movement in real life to move, once you get into the "real game" ;) **
+Move character with left thumbstick or **just use experimental "jog in place" movement in real life to move, once you get into the "real game" ;)**
 
 Turn in real life or with right thumb stick.  You begin with snap turn.  
+
 
 **Sprint**
 
@@ -37,10 +38,6 @@ Sprint (toggle) by clicking left thumbstick
 
 **Bullet Time**
 On and off by pressing the Y button on your right controller.  On its own, if you do not end it yourself, bullet time only lasts for a second or two. 
-
-Select options in menus with your right controller and then press trigger
-
-Sprint (toggle) by clicking left thumbstick
 
 
 **Jump**
@@ -68,6 +65,7 @@ Glide when you are in the air or jump off of a ledge by extending your arms out 
 Pull your sword out of its holster by positioning your hands around your shoulder areas and pressing the trigger key.  Pressing the key again in the same area holsters the sword.
 
 You can cut a lot of the blocks and rocks with your swords.
+
 
 **Pointer**
 
