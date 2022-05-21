@@ -156,7 +156,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 2.5, -3 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 3, -5 )
 
 [node name="ClimbPlatformA2" parent="." instance=ExtResource( 23 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2, -5 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.39034, 2, -6.55788 )
 
 [node name="PickBlockA" parent="." instance=ExtResource( 24 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6348, 0.272759, 0 )
