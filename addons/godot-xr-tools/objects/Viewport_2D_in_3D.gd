@@ -87,3 +87,6 @@ func _on_pointer_entered():
 
 func _on_pointer_exited():
 	emit_signal("pointer_exited")
+	
+func _input(event):
+	$Viewport.input(event)

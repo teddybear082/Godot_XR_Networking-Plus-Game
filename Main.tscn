@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=2]
+[gd_scene load_steps=58 format=2]
 
 [ext_resource path="res://sounds/level_up.ogg" type="AudioStream" id=1]
 [ext_resource path="res://addons/godot-xr-tools/misc/VR_Common_Shader_Cache.tscn" type="PackedScene" id=2]
@@ -48,6 +48,8 @@
 [ext_resource path="res://WristHUDViewport.tscn" type="PackedScene" id=46]
 [ext_resource path="res://PickableTV.tscn" type="PackedScene" id=47]
 [ext_resource path="res://ControlsViewport.tscn" type="PackedScene" id=48]
+[ext_resource path="res://LeaderboardViewport3D.tscn" type="PackedScene" id=49]
+[ext_resource path="res://addons/godot-xr-tools/objects/Virtual_Keyboard.tscn" type="PackedScene" id=50]
 
 [sub_resource type="PlaneMesh" id=2]
 size = Vector2( 60, 60 )
@@ -941,6 +943,12 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03, -0.05, 0.15 )
 
 [node name="ControlsViewport" parent="." instance=ExtResource( 48 )]
 transform = Transform( 0.0260025, 0, -0.999662, 0, 1, 0, 0.999662, 0, 0.0260025, 29.3987, 1.37831, -2.33332 )
+
+[node name="LeaderboardViewport3D" parent="." instance=ExtResource( 49 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7048, 1.4819, -2.59619 )
+
+[node name="Virtual_Keyboard" parent="." instance=ExtResource( 50 )]
+transform = Transform( 1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, 1.314, 0.681968, -1.99615 )
 
 [editable path="FPController"]
 [editable path="FPController/ARVRCamera/TestGrabArea"]

@@ -8,6 +8,7 @@ var score = 0
 var last_score = 0
 var last_lives = 3
 var level = 1
+export var player_name = "Guest"
 export var lives := 3
 export var pellet_value := 100
 export var ghost_value := 1000
@@ -88,6 +89,7 @@ func new_game():
 func game_over():
 	emit_signal("game_over")
 	print("Game over!")
+	SilentWolf.Scores.persist_score(player_name, score)
 	$PlayerGameOverSound.play()
 	new_game()
 	
