@@ -93,5 +93,20 @@ margin_bottom = 20.0
 custom_styles/hover = SubResource( 2 )
 text = "EXIT"
 
+[node name="CheckBox" type="CheckBox" parent="."]
+margin_left = 179.0
+margin_top = 105.0
+margin_right = 285.0
+margin_bottom = 146.0
+custom_colors/font_color_disabled = Color( 0.835294, 0.823529, 0.0666667, 1 )
+custom_colors/font_color_focus = Color( 0.835294, 0.823529, 0.0666667, 1 )
+custom_colors/font_color_hover_pressed = Color( 0.835294, 0.823529, 0.0666667, 1 )
+custom_colors/font_color = Color( 0.835294, 0.823529, 0.0666667, 1 )
+custom_colors/font_color_hover = Color( 0.835294, 0.823529, 0.0666667, 1 )
+custom_colors/font_color_pressed = Color( 0.835294, 0.823529, 0.0666667, 1 )
+pressed = true
+text = "Music"
+
 [connection signal="pressed" from="NewGameRect/NewGameButton" to="." method="_on_NewGameButton_pressed"]
 [connection signal="pressed" from="NewGameRect/QuitRect/QuitButton" to="." method="_on_QuitButton_pressed"]
+[connection signal="toggled" from="CheckBox" to="." method="_on_CheckBox_toggled"]

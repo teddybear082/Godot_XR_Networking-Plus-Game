@@ -7,6 +7,7 @@ extends Control
 onready var player_properties = get_tree().get_root().find_node("PlayerProperties",true,false)
 onready var game_info_text = $NewGameRect/GameInfoRect/GameInfoText
 onready var player_turn = get_tree().get_root().find_node("Function_Direct_movement_turn_only",true,false)
+onready var music = get_tree().get_root().find_node("BackgroundMusic",true,false)
 
 var lives = 3
 var score = 0
@@ -41,3 +42,10 @@ func _on_QuitButton_pressed():
 
 
 
+
+
+func _on_CheckBox_toggled(button_pressed):
+	if music.playing:
+		music.stop() # Replace with function body.
+	else:
+		music.play()
