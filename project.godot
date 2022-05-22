@@ -170,7 +170,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Godot XR Networking Plus Game"
+config/name="Pelletman"
 run/main_scene="res://GodotSplash.tscn"
 config/icon="res://icon.png"
 

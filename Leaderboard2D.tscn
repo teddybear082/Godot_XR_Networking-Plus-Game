@@ -31,18 +31,18 @@ margin_right = 1314.0
 text = "Refresh Leaderboard"
 
 [node name="PlayerNameLineEdit" type="LineEdit" parent="." index="2"]
-margin_left = 778.0
-margin_top = 828.0
-margin_right = 1178.0
-margin_bottom = 978.0
+margin_left = 1401.0
+margin_top = 478.0
+margin_right = 1858.0
+margin_bottom = 628.0
 theme = ExtResource( 2 )
 custom_fonts/font = SubResource( 1 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." index="3"]
-margin_left = 245.0
-margin_top = 831.0
-margin_right = 764.0
-margin_bottom = 964.0
+margin_left = 1402.0
+margin_top = 250.0
+margin_right = 1813.0
+margin_bottom = 443.0
 theme = ExtResource( 2 )
 custom_colors/default_color = Color( 0.701961, 0.835294, 0.0784314, 1 )
 custom_fonts/normal_font = SubResource( 2 )
@@ -50,10 +50,10 @@ text = "Input Player Name for Leaderboard:
 "
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="." index="4"]
-margin_left = 787.0
-margin_top = 987.0
-margin_right = 1437.0
-margin_bottom = 1087.0
+margin_left = 1404.0
+margin_top = 679.0
+margin_right = 1811.0
+margin_bottom = 779.0
 theme = ExtResource( 2 )
 custom_fonts/normal_font = SubResource( 3 )
 text = "(Press Enter Key to Submit)"
