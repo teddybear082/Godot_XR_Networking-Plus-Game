@@ -162,6 +162,8 @@ Pac-Man-style level model from Sketchfab: https://skfb.ly/6XGYL by phamducphuc94
 
 Arcade machine model from Sketchfab: https://skfb.ly/Q69Oby Daniel Bruck
 
+Leaderboard service provided by SilentWolf: https://silentwolf.com/
+
 Thanks to user GoatchurchPrime/JulianTodd for personally testing with me!
 
 Thanks to all of the Godot XR Discord folks for tons of help to a total noob.
