@@ -146,6 +146,8 @@ Uses https://github.com/goatchurchprime/Godot_XR_networking
 
 Ports experimental "Jog in place to move in game" functionality from OQ-Toolkit originally found here: https://github.com/NeoSpark314/godot_oculus_quest_toolkit/blob/master/OQ_Toolkit/OQ_ARVROrigin/scripts/Locomotion_WalkInPlace.gd
 
+Ghost models from opengameart.org, by Phani29: https://opengameart.org/content/ghost-4
+
 Textures from https://ambientcg.com/
 
 Sounds and music used from OpenGameArt.org:
