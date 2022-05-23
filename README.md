@@ -66,6 +66,8 @@ Pull your sword out of its holster by positioning your hands around your shoulde
 
 You can cut a lot of the blocks and rocks with your swords.
 
+OK yeah, does a sword have any place in PelletMan? Not really but I have fun cutting blocks in bullet time so left it in.... hehe.
+
 
 **Pointer**
 
@@ -102,7 +104,7 @@ If you use Virtual Desktop, make sure you have SteamVR set as your OpenXR runtim
 
 **MULTI-PLAYER (Experimental, and see "Known Issues")**
 
-*Once you get into the "real game"* you can see a networking debug menu in front of you. You can hide it or bring it up again by pressing the left controller Y button.
+*Once you get into the "real game"* you can see a networking debug menu in the middle of the "playground" area near the leaderboard. You can hide it or bring it up again by pressing the left controller Y button.
 
 If you have two headsets you can play local multiplayer by going to the top left drop down menu and choosing "ENet" and going to the top right menu and choosing one person "as server" and the other person as "Local Network."   
 
