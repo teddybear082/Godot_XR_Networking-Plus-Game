@@ -97,6 +97,9 @@ func _pick_up_object(p_object):
 	if p_object:
 		picked_up_object = p_object
 		picked_up_object.pick_up(self, get_parent())
+		get_parent().set_rumble(.3) 
+		yield(get_tree().create_timer(.2), "timeout") 
+		get_parent().set_rumble(0)
 		emit_signal("has_picked_up", picked_up_object)
 
 func _on_button_pressed(p_button):

@@ -12,7 +12,6 @@ export var shift_modifier := false
 func _ready():
 	# Find the VirtualKeyboard parent
 	var keyboard = _get_virtual_keyboard()
-	print(str(keyboard))
 	if keyboard:
 		connect("pressed", keyboard, "on_key_pressed", [scan_code_text, unicode, shift_modifier])
 

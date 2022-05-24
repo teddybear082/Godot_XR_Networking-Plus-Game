@@ -23,4 +23,12 @@ func _process(delta):
 
 func _on_StartButtonArea_area_entered(area):
 	if area == $FPController/LeftHandController/Function_Pickup or area == $FPController/RightHandController/Function_Pickup:
-		 get_tree().change_scene("res://Main.tscn")# Replace with function body.
+		if area == $FPController/LeftHandController/Function_Pickup:
+			$FPController/LeftHandController.set_rumble(.5) 
+			yield(get_tree().create_timer(1), "timeout") 
+			$FPController/LeftHandController.set_rumble(0) 
+		if area == $FPController/RightHandController/Function_Pickup:
+			$FPController/RightHandController.set_rumble(.5) 
+			yield(get_tree().create_timer(1), "timeout") 
+			$FPController/RightHandController.set_rumble(0) 
+		get_tree().change_scene("res://Main.tscn")# Replace with function body.

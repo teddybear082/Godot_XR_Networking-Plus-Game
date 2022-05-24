@@ -14,3 +14,6 @@ func _on_Area_body_exited(body):
 		plane_point_b = $mesh/B.global_transform.origin
 		plane_point_c = $mesh/C.global_transform.origin
 		body.cut_object(Plane(plane_point_a,plane_point_b,plane_point_c))
+		get_parent().by_controller.set_rumble(.5) 
+		yield(get_tree().create_timer(.5), "timeout") 
+		get_parent().by_controller.set_rumble(0) 

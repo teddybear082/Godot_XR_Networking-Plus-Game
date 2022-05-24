@@ -61,6 +61,11 @@ func _on_GhostArea_body_entered(body):
 	if body != player_body:
 		return
 	if body == player_body:
+		arvrorigin.get_node("LeftHandController").set_rumble(.5) 
+		arvrorigin.get_node("RightHandController").set_rumble(.5)
+		yield(get_tree().create_timer(.2), "timeout") 
+		arvrorigin.get_node("LeftHandController").set_rumble(0)
+		arvrorigin.get_node("RightHandController").set_rumble(0)
 		if escape == false:
 			#code to set GhostSound to kill player sound and play
 			$GhostSound.play()

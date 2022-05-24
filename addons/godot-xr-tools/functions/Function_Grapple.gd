@@ -132,6 +132,9 @@ func _process(delta: float):
 			hook_point = grapple_raycast.get_collision_point()
 			_grapple_push = true
 			set_grappling(true)
+			_controller.set_rumble(.5) 
+			yield(get_tree().create_timer(.3), "timeout") 
+			_controller.set_rumble(0) 
 			return
 
 		# Update visible grapple target
