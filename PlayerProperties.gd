@@ -9,6 +9,7 @@ var last_score = 0
 var last_lives = 3
 var level = 1
 var wrist_view = null
+var view_update_throttle = 0
 export var player_name = "Guest"
 export var lives := 3
 export var pellet_value := 100
@@ -17,6 +18,12 @@ export var fruit_value := 500
 export var energizer_value := 200
 onready var arvrorigin = get_owner().get_node("FPController")
 onready var start_position = get_owner().get_node("PacManStart1")
+onready var leaderboard_view = get_owner().get_node("LeaderboardViewport3D/Viewport")
+onready var main_menu_view = get_owner().get_node("PacManMenuScreen/Viewport")
+onready var virtual_keyboard_view = get_owner().get_node("Virtual_Keyboard/Viewport2Din3D/Viewport")
+onready var controls_view = get_owner().get_node("ControlsViewport/Viewport")
+onready var tv_view = get_owner().get_node("PickableTV/TestTelevision/Viewport")
+onready var network_view = get_owner().get_node("XR-Tools-Networking/ViewportNetworkGateway/Viewport")
 signal game_over
 signal player_data_changed(new_lives, new_score, new_level)
 # Called when the node enters the scene tree for the first time.
@@ -27,6 +34,13 @@ func _ready():
 	last_lives = lives
 	wrist_view = arvrorigin.get_node("LeftHandController/LeftHand/WristHUDViewport/Viewport")
 	wrist_view.set_update_mode(1)
+	leaderboard_view.set_update_mode(1)
+	main_menu_view.set_update_mode(1)
+	virtual_keyboard_view.set_update_mode(1)
+	controls_view.set_update_mode(1)
+	tv_view.set_update_mode(1)
+	network_view.set_update_mode(1)
+	view_update_throttle = 0
 # Called when the node enters the scene tree for the first time.
 
 		
@@ -36,6 +50,18 @@ func _ready():
 	#score = player_score
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	#process to throttle viewport updates
+	view_update_throttle+=1
+	if view_update_throttle == 65:
+		leaderboard_view.set_update_mode(1)
+		main_menu_view.set_update_mode(1)
+		virtual_keyboard_view.set_update_mode(1)
+		controls_view.set_update_mode(1)
+		tv_view.set_update_mode(1)
+		network_view.set_update_mode(1)
+		view_update_throttle = 0
+	
+	
 	#if score goes up, update other elements that depend on player data
 	if score > last_score:
 		emit_signal("player_data_changed", lives, score, level)
