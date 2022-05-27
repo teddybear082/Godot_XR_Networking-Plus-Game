@@ -44,7 +44,7 @@ func render_board(scores, local_scores):
 	else:
 		for score in all_scores:
 			add_item(score.player_name, str(int(score.score)))
-
+	
 
 
 func is_default_leaderboard(ld_config):
@@ -130,7 +130,6 @@ func _on_CloseButton_pressed():
 	list_index = 0
 	render_board(SilentWolf.Scores.scores, SilentWolf.Scores.local_scores)
 	
-	
 	#var scene_name = SilentWolf.scores_config.open_scene_on_close
 	#SWLogger.info("Closing SilentWolf leaderboard, switching to scene: " + str(scene_name))
 	#global.reset()
@@ -145,3 +144,4 @@ func _on_PlayerNameLineEdit_text_entered(new_text):
 	$RichTextLabel2.text = "NEW PLAYER NAME ACCEPTED!!"
 	yield(get_tree().create_timer(10), "timeout")
 	$RichTextLabel2.text = "(Press Enter Key to Submit)"
+	

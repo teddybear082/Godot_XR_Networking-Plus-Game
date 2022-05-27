@@ -100,6 +100,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.54476, 0.448397, -0.996403 
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.925065, -0.301336, 0.231195, 0.0305464, 0.66577, 0.745531, -0.378578, -0.682603, 0.625085, 3.30504, 8.65411, 0 )
+visible = false
 
 [node name="BoundaryWall" parent="." instance=ExtResource( 21 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 30.5, 2.5, 0 )
@@ -816,11 +817,6 @@ material/0 = null
 [node name="PacManMenuScreen" parent="." instance=ExtResource( 44 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 29, 1.17879, 2.25176 )
 
-[node name="PickableTV" parent="." instance=ExtResource( 47 )]
-transform = Transform( -4.16567e-08, 0.302985, -0.952995, 1.32439e-08, 0.952995, 0.302985, 1, 0, -4.37114e-08, 29.4543, 1.25156, 2.27075 )
-mass = 5.10204
-gravity_scale = 2.0
-
 [node name="FPController" parent="." instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.3977, 0, 0 )
 
@@ -950,6 +946,17 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7048, 1.4819, -2.59619 )
 [node name="Virtual_Keyboard" parent="." instance=ExtResource( 50 )]
 transform = Transform( 1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, 1.314, 0.681968, -1.99615 )
 
+[node name="PickableTV" parent="." instance=ExtResource( 47 )]
+transform = Transform( 1, 0, 0, 0, 0.941341, 0.337457, 0, -0.337457, 0.941341, 5.03111, 1.25, 11.3613 )
+
+[editable path="SampleGhost"]
+[editable path="SampleGhost/Ghost"]
+[editable path="SampleGhost2"]
+[editable path="SampleGhost2/Ghost"]
+[editable path="SampleGhost3"]
+[editable path="SampleGhost3/Ghost"]
+[editable path="SampleGhost4"]
+[editable path="SampleGhost4/Ghost"]
 [editable path="FPController"]
 [editable path="FPController/ARVRCamera/TestGrabArea"]
 [editable path="FPController/LeftHandController/LeftHand"]

@@ -18,3 +18,4 @@ func handle_data_changed(player_lives, player_score, player_level):
 	score = player_score
 	level = player_level
 	wrist_text.set_text("Lives: " + str(lives) + "\nScore: " + str(score) + "\nLevel: " + str(level))
+	

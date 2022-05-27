@@ -84,7 +84,7 @@ func _ready():
 
 func _on_pointer_entered():
 	emit_signal("pointer_entered")
-
+	
 func _on_pointer_exited():
 	emit_signal("pointer_exited")
 	

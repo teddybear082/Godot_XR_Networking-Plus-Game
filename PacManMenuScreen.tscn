@@ -7,14 +7,14 @@
 resource_local_to_scene = true
 size = Vector2( 1.5, 1 )
 
-[sub_resource type="ViewportTexture" id=2]
+[sub_resource type="ViewportTexture" id=5]
 
 [sub_resource type="SpatialMaterial" id=3]
 resource_local_to_scene = true
 flags_transparent = true
 flags_unshaded = true
 params_cull_mode = 2
-albedo_texture = SubResource( 2 )
+albedo_texture = SubResource( 5 )
 
 [sub_resource type="BoxShape" id=4]
 resource_local_to_scene = true
