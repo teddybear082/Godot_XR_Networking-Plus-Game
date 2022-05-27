@@ -8,6 +8,7 @@ var score = 0
 var last_score = 0
 var last_lives = 3
 var level = 1
+var wrist_view = null
 export var player_name = "Guest"
 export var lives := 3
 export var pellet_value := 100
@@ -24,8 +25,8 @@ func _ready():
 	score = 0 # Replace with function body.
 	last_score = 0
 	last_lives = lives
-	
-	
+	wrist_view = arvrorigin.get_node("LeftHandController/LeftHand/WristHUDViewport/Viewport")
+	wrist_view.set_update_mode(1)
 # Called when the node enters the scene tree for the first time.
 
 		
@@ -39,12 +40,13 @@ func _process(delta):
 	if score > last_score:
 		emit_signal("player_data_changed", lives, score, level)
 		last_score = score
-		
+		wrist_view.set_update_mode(1)
 	#if player loses life, update other elements that depend on player data	
 	if lives < last_lives:
 		emit_signal("player_data_changed", lives, score, level)
 		last_lives = lives
-		arvrorigin.transform.origin = start_position.global_transform.origin #wss global
+		arvrorigin.transform.origin = start_position.global_transform.origin
+		wrist_view.set_update_mode(1) 
 	#player lost all lives, game over	
 	if lives == 0:
 		game_over() 
@@ -61,6 +63,7 @@ func _process(delta):
 		reset_ghost_positions()
 		level+=1
 		emit_signal("player_data_changed", lives, score, level)
+		wrist_view.set_update_mode(1)
 		arvrorigin.transform.origin = start_position.global_transform.origin
 		$PlayerNextLevelSound.play()
 			
@@ -78,7 +81,7 @@ func new_game():
 		
 		#update score board
 		emit_signal("player_data_changed", lives, score, level)
-		
+		wrist_view.set_update_mode(1)
 		#reset ghost positions
 		reset_ghost_positions()
 			
