@@ -39,3 +39,6 @@ func _on_EnergizerTimer_timeout():
 	get_tree().call_group("ghosts", "attack_mode")# Replace with function body.
 	energizer_sound.play()
 		#	
+func new_game():
+	self.visible = true
+	$EnergizerHitBox/CollisionShape.disabled = false

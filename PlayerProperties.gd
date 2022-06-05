@@ -86,6 +86,7 @@ func _process(delta):
 	#print(str(pellet_count))
 	if pellet_count == 0:
 		get_tree().call_group("pellets", "new_game")
+		get_tree().call_group("energizers", "new_game")
 		reset_ghost_positions()
 		level+=1
 		emit_signal("player_data_changed", lives, score, level)
@@ -113,6 +114,7 @@ func new_game():
 			
 		#put all pellets back where they should start
 		get_tree().call_group("pellets", "new_game")
+		get_tree().call_group("energizers", "new_game")
 
 #handle game over
 func game_over():
